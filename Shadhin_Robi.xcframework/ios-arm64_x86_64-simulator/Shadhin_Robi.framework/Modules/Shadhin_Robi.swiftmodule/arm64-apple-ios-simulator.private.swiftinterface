@@ -1,0 +1,2326 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Shadhin_Robi
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import AVKit
+import Accelerate
+import Combine
+import CommonCrypto
+import CoreData
+import CoreGraphics
+import CoreImage
+import CoreMedia
+import Dispatch
+import Foundation
+import ImageIO
+import MediaPlayer
+import MobileCoreServices
+import ObjectiveC
+import QuartzCore
+@_exported import Shadhin_Robi
+import Swift
+import SystemConfiguration
+import UIKit
+import UniformTypeIdentifiers
+import UserNotifications
+import WebKit
+import _Concurrency
+import _StringProcessing
+public enum AudioPlayerError : Swift.Error {
+  case maximumRetryCountHit
+  case foundationError(Swift.Error)
+  case itemNotConsideredPlayable
+  case noItemsConsideredPlayable
+}
+public enum AudioPlayerState {
+  case buffering
+  case playing
+  case paused
+  case stopped
+  case waitingForConnection
+  case failed(Shadhin_Robi.AudioPlayerError)
+}
+extension Shadhin_Robi.AudioPlayerState : Swift.Equatable {
+}
+public func == (lhs: Shadhin_Robi.AudioPlayerState, rhs: Shadhin_Robi.AudioPlayerState) -> Swift.Bool
+extension Shadhin_Robi.EKAttributes {
+  public enum StatusBar {
+    public typealias Appearance = (visible: Swift.Bool, style: UIKit.UIStatusBarStyle)
+    case ignored
+    case hidden
+    case dark
+    case light
+    case inferred
+    public var appearance: Shadhin_Robi.EKAttributes.StatusBar.Appearance {
+      get
+    }
+    public static func statusBar(by appearance: Shadhin_Robi.EKAttributes.StatusBar.Appearance) -> Shadhin_Robi.EKAttributes.StatusBar
+    public static var currentAppearance: Shadhin_Robi.EKAttributes.StatusBar.Appearance {
+      get
+    }
+    public static var currentStatusBar: Shadhin_Robi.EKAttributes.StatusBar {
+      get
+    }
+    public static func == (a: Shadhin_Robi.EKAttributes.StatusBar, b: Shadhin_Robi.EKAttributes.StatusBar) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension Shadhin_Robi.AudioPlayer {
+  public func resume()
+  public func pause()
+  public func previous()
+  public func next()
+  public func nextOrStop()
+  public func stop()
+  public func seek(to time: Foundation.TimeInterval, byAdaptingTimeToFitSeekableRanges: Swift.Bool = false, toleranceBefore: CoreMedia.CMTime = CMTime.positiveInfinity, toleranceAfter: CoreMedia.CMTime = CMTime.positiveInfinity, completionHandler: ((Swift.Bool) -> Swift.Void)? = nil)
+  public func seekToSeekableRangeStart(padding: Foundation.TimeInterval, completionHandler: ((Swift.Bool) -> Swift.Void)? = nil)
+  public func seekToSeekableRangeEnd(padding: Foundation.TimeInterval, completionHandler: ((Swift.Bool) -> Swift.Void)? = nil)
+  public func remoteControlReceived(with event: UIKit.UIEvent)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class LineSpinFadeLoader : Shadhin_Robi.LBIndicator {
+  @_Concurrency.MainActor(unsafe) override open func setupAnimation(in layer: QuartzCore.CALayer, size: CoreFoundation.CGSize)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum AFError : Swift.Error {
+  public enum MultipartEncodingFailureReason {
+    case bodyPartURLInvalid(url: Foundation.URL)
+    case bodyPartFilenameInvalid(in: Foundation.URL)
+    case bodyPartFileNotReachable(at: Foundation.URL)
+    case bodyPartFileNotReachableWithError(atURL: Foundation.URL, error: Swift.Error)
+    case bodyPartFileIsDirectory(at: Foundation.URL)
+    case bodyPartFileSizeNotAvailable(at: Foundation.URL)
+    case bodyPartFileSizeQueryFailedWithError(forURL: Foundation.URL, error: Swift.Error)
+    case bodyPartInputStreamCreationFailed(for: Foundation.URL)
+    case outputStreamCreationFailed(for: Foundation.URL)
+    case outputStreamFileAlreadyExists(at: Foundation.URL)
+    case outputStreamURLInvalid(url: Foundation.URL)
+    case outputStreamWriteFailed(error: Swift.Error)
+    case inputStreamReadFailed(error: Swift.Error)
+  }
+  public struct UnexpectedInputStreamLength : Swift.Error {
+    public var bytesExpected: Swift.UInt64
+    public var bytesRead: Swift.UInt64
+  }
+  public enum ParameterEncodingFailureReason {
+    case missingURL
+    case jsonEncodingFailed(error: Swift.Error)
+    case customEncodingFailed(error: Swift.Error)
+  }
+  public enum ParameterEncoderFailureReason {
+    public enum RequiredComponent {
+      case url
+      case httpMethod(rawValue: Swift.String)
+    }
+    case missingRequiredComponent(Shadhin_Robi.AFError.ParameterEncoderFailureReason.RequiredComponent)
+    case encoderFailed(error: Swift.Error)
+  }
+  public enum ResponseValidationFailureReason {
+    case dataFileNil
+    case dataFileReadFailed(at: Foundation.URL)
+    case missingContentType(acceptableContentTypes: [Swift.String])
+    case unacceptableContentType(acceptableContentTypes: [Swift.String], responseContentType: Swift.String)
+    case unacceptableStatusCode(code: Swift.Int)
+    case customValidationFailed(error: Swift.Error)
+  }
+  public enum ResponseSerializationFailureReason {
+    case inputDataNilOrZeroLength
+    case inputFileNil
+    case inputFileReadFailed(at: Foundation.URL)
+    case stringSerializationFailed(encoding: Swift.String.Encoding)
+    case jsonSerializationFailed(error: Swift.Error)
+    case decodingFailed(error: Swift.Error)
+    case customSerializationFailed(error: Swift.Error)
+    case invalidEmptyResponse(type: Swift.String)
+  }
+  public enum ServerTrustFailureReason {
+    public struct Output {
+      public let host: Swift.String
+      public let trust: Security.SecTrust
+      public let status: Darwin.OSStatus
+      public let result: Security.SecTrustResultType
+    }
+    case noRequiredEvaluator(host: Swift.String)
+    case noCertificatesFound
+    case noPublicKeysFound
+    case policyApplicationFailed(trust: Security.SecTrust, policy: Security.SecPolicy, status: Darwin.OSStatus)
+    case settingAnchorCertificatesFailed(status: Darwin.OSStatus, certificates: [Security.SecCertificate])
+    case revocationPolicyCreationFailed
+    case trustEvaluationFailed(error: Swift.Error?)
+    case defaultEvaluationFailed(output: Shadhin_Robi.AFError.ServerTrustFailureReason.Output)
+    case hostValidationFailed(output: Shadhin_Robi.AFError.ServerTrustFailureReason.Output)
+    case revocationCheckFailed(output: Shadhin_Robi.AFError.ServerTrustFailureReason.Output, options: Shadhin_Robi.RevocationTrustEvaluator.Options)
+    case certificatePinningFailed(host: Swift.String, trust: Security.SecTrust, pinnedCertificates: [Security.SecCertificate], serverCertificates: [Security.SecCertificate])
+    case publicKeyPinningFailed(host: Swift.String, trust: Security.SecTrust, pinnedKeys: [Security.SecKey], serverKeys: [Security.SecKey])
+    case customEvaluationFailed(error: Swift.Error)
+  }
+  public enum URLRequestValidationFailureReason {
+    case bodyDataInGETRequest(Foundation.Data)
+  }
+  case createUploadableFailed(error: Swift.Error)
+  case createURLRequestFailed(error: Swift.Error)
+  case downloadedFileMoveFailed(error: Swift.Error, source: Foundation.URL, destination: Foundation.URL)
+  case explicitlyCancelled
+  case invalidURL(url: Shadhin_Robi.URLConvertible)
+  case multipartEncodingFailed(reason: Shadhin_Robi.AFError.MultipartEncodingFailureReason)
+  case parameterEncodingFailed(reason: Shadhin_Robi.AFError.ParameterEncodingFailureReason)
+  case parameterEncoderFailed(reason: Shadhin_Robi.AFError.ParameterEncoderFailureReason)
+  case requestAdaptationFailed(error: Swift.Error)
+  case requestRetryFailed(retryError: Swift.Error, originalError: Swift.Error)
+  case responseValidationFailed(reason: Shadhin_Robi.AFError.ResponseValidationFailureReason)
+  case responseSerializationFailed(reason: Shadhin_Robi.AFError.ResponseSerializationFailureReason)
+  case serverTrustEvaluationFailed(reason: Shadhin_Robi.AFError.ServerTrustFailureReason)
+  case sessionDeinitialized
+  case sessionInvalidated(error: Swift.Error?)
+  case sessionTaskFailed(error: Swift.Error)
+  case urlRequestValidationFailed(reason: Shadhin_Robi.AFError.URLRequestValidationFailureReason)
+}
+extension Swift.Error {
+  public var asAFError: Shadhin_Robi.AFError? {
+    get
+  }
+  public func asAFError(orFailWith message: @autoclosure () -> Swift.String, file: Swift.StaticString = #file, line: Swift.UInt = #line) -> Shadhin_Robi.AFError
+}
+extension Shadhin_Robi.AFError {
+  public var isSessionDeinitializedError: Swift.Bool {
+    get
+  }
+  public var isSessionInvalidatedError: Swift.Bool {
+    get
+  }
+  public var isExplicitlyCancelledError: Swift.Bool {
+    get
+  }
+  public var isInvalidURLError: Swift.Bool {
+    get
+  }
+  public var isParameterEncodingError: Swift.Bool {
+    get
+  }
+  public var isParameterEncoderError: Swift.Bool {
+    get
+  }
+  public var isMultipartEncodingError: Swift.Bool {
+    get
+  }
+  public var isRequestAdaptationError: Swift.Bool {
+    get
+  }
+  public var isResponseValidationError: Swift.Bool {
+    get
+  }
+  public var isResponseSerializationError: Swift.Bool {
+    get
+  }
+  public var isServerTrustEvaluationError: Swift.Bool {
+    get
+  }
+  public var isRequestRetryError: Swift.Bool {
+    get
+  }
+  public var isCreateUploadableError: Swift.Bool {
+    get
+  }
+  public var isCreateURLRequestError: Swift.Bool {
+    get
+  }
+  public var isDownloadedFileMoveError: Swift.Bool {
+    get
+  }
+  public var isSessionTaskError: Swift.Bool {
+    get
+  }
+}
+extension Shadhin_Robi.AFError {
+  public var url: Foundation.URL? {
+    get
+  }
+  public var underlyingError: Swift.Error? {
+    get
+  }
+  public var acceptableContentTypes: [Swift.String]? {
+    get
+  }
+  public var responseContentType: Swift.String? {
+    get
+  }
+  public var responseCode: Swift.Int? {
+    get
+  }
+  public var failedStringEncoding: Swift.String.Encoding? {
+    get
+  }
+  public var sourceURL: Foundation.URL? {
+    get
+  }
+  public var destinationURL: Foundation.URL? {
+    get
+  }
+  public var downloadResumeData: Foundation.Data? {
+    get
+  }
+}
+extension Shadhin_Robi.AFError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public struct AudioPlayerMode : Swift.OptionSet {
+  public let rawValue: Swift.UInt
+  public init(rawValue: Swift.UInt)
+  public static let normal: Shadhin_Robi.AudioPlayerMode
+  public static let shuffle: Shadhin_Robi.AudioPlayerMode
+  public static let `repeat`: Shadhin_Robi.AudioPlayerMode
+  public static let repeatAll: Shadhin_Robi.AudioPlayerMode
+  public typealias ArrayLiteralElement = Shadhin_Robi.AudioPlayerMode
+  public typealias Element = Shadhin_Robi.AudioPlayerMode
+  public typealias RawValue = Swift.UInt
+}
+extension Shadhin_Robi.EKAttributes {
+  public struct PositionConstraints {
+    public enum SafeArea {
+      case overridden
+      case empty(fillSafeArea: Swift.Bool)
+      public var isOverridden: Swift.Bool {
+        get
+      }
+    }
+    public enum Edge {
+      case ratio(value: CoreFoundation.CGFloat)
+      case offset(value: CoreFoundation.CGFloat)
+      case constant(value: CoreFoundation.CGFloat)
+      case intrinsic
+      public static var fill: Shadhin_Robi.EKAttributes.PositionConstraints.Edge {
+        get
+      }
+    }
+    public struct Size {
+      public var width: Shadhin_Robi.EKAttributes.PositionConstraints.Edge
+      public var height: Shadhin_Robi.EKAttributes.PositionConstraints.Edge
+      public init(width: Shadhin_Robi.EKAttributes.PositionConstraints.Edge, height: Shadhin_Robi.EKAttributes.PositionConstraints.Edge)
+      public static var intrinsic: Shadhin_Robi.EKAttributes.PositionConstraints.Size {
+        get
+      }
+      public static var sizeToWidth: Shadhin_Robi.EKAttributes.PositionConstraints.Size {
+        get
+      }
+      public static var screen: Shadhin_Robi.EKAttributes.PositionConstraints.Size {
+        get
+      }
+    }
+    public enum KeyboardRelation {
+      public struct Offset {
+        public var bottom: CoreFoundation.CGFloat
+        public var screenEdgeResistance: CoreFoundation.CGFloat?
+        public init(bottom: CoreFoundation.CGFloat = 0, screenEdgeResistance: CoreFoundation.CGFloat? = nil)
+        public static var none: Shadhin_Robi.EKAttributes.PositionConstraints.KeyboardRelation.Offset {
+          get
+        }
+      }
+      case bind(offset: Shadhin_Robi.EKAttributes.PositionConstraints.KeyboardRelation.Offset)
+      case unbind
+      public var isBound: Swift.Bool {
+        get
+      }
+    }
+    public struct Rotation {
+      public enum SupportedInterfaceOrientation {
+        case standard
+        case all
+        public static func == (a: Shadhin_Robi.EKAttributes.PositionConstraints.Rotation.SupportedInterfaceOrientation, b: Shadhin_Robi.EKAttributes.PositionConstraints.Rotation.SupportedInterfaceOrientation) -> Swift.Bool
+        public func hash(into hasher: inout Swift.Hasher)
+        public var hashValue: Swift.Int {
+          get
+        }
+      }
+      public var isEnabled: Swift.Bool
+      public var supportedInterfaceOrientations: Shadhin_Robi.EKAttributes.PositionConstraints.Rotation.SupportedInterfaceOrientation
+      public init()
+    }
+    public var rotation: Shadhin_Robi.EKAttributes.PositionConstraints.Rotation
+    public var keyboardRelation: Shadhin_Robi.EKAttributes.PositionConstraints.KeyboardRelation
+    public var size: Shadhin_Robi.EKAttributes.PositionConstraints.Size
+    public var maxSize: Shadhin_Robi.EKAttributes.PositionConstraints.Size
+    public var verticalOffset: CoreFoundation.CGFloat
+    public var safeArea: Shadhin_Robi.EKAttributes.PositionConstraints.SafeArea
+    public var hasVerticalOffset: Swift.Bool {
+      get
+    }
+    public static var float: Shadhin_Robi.EKAttributes.PositionConstraints {
+      get
+    }
+    public static var fullWidth: Shadhin_Robi.EKAttributes.PositionConstraints {
+      get
+    }
+    public static var fullScreen: Shadhin_Robi.EKAttributes.PositionConstraints {
+      get
+    }
+    public init(verticalOffset: CoreFoundation.CGFloat = 0, size: Shadhin_Robi.EKAttributes.PositionConstraints.Size = .sizeToWidth, maxSize: Shadhin_Robi.EKAttributes.PositionConstraints.Size = .intrinsic)
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ShadhinRobi : ObjectiveC.NSObject {
+  public static let shared: Shadhin_Robi.ShadhinRobi
+  @objc final public func login(number: Swift.String, delegate: Shadhin_Robi.ShadhinCoreNotifier)
+  @objc final public func gotoHome(with tabController: UIKit.UITabBarController?, navigationController: UIKit.UINavigationController)
+  @objc final public func eventRegister(with event: UIKit.UIEvent)
+  @objc final public func openPatch(patchID: Swift.String, navigationController: UIKit.UINavigationController, tabController: UIKit.UITabBarController?)
+  @objc final public func gotoRadio(nav navigation: UIKit.UINavigationController, tabController: UIKit.UITabBarController? = nil)
+  @objc final public func openRadio(with id: Swift.String, navigationController: UIKit.UINavigationController, tabController: UIKit.UITabBarController?)
+  @objc final public func clearAllCache()
+  @objc final public func stopMusic()
+  @objc deinit
+}
+extension Shadhin_Robi.ShadhinRobi : Shadhin_Robi.ShadhinLogNotifier {
+  final public func tokenStatus(token isValid: Swift.Bool, error: Swift.String?)
+  final public func patchError(error: Swift.String)
+  final public func amarTuneError(error: Swift.String?)
+  final public func rcError(error: Swift.String?)
+  final public func shareContentWithRC(rc code: Swift.String)
+}
+public enum FeatureType : Swift.String {
+  case LATEST_RELEASE
+  case PODCAST
+  case POPULAR_ARTIST
+  case POPULAR_VIDEO
+  case AMAR_TUNE
+  case AMAR_TUNE_TOP_100
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BallPulseIndicator : Shadhin_Robi.LBIndicator {
+  @_Concurrency.MainActor(unsafe) override open func setupAnimation(in layer: QuartzCore.CALayer, size: CoreFoundation.CGSize)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public typealias Metadata = [AVFoundation.AVMetadataItem]
+public protocol AudioPlayerDelegate : AnyObject {
+  func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, didChangeStateFrom from: Shadhin_Robi.AudioPlayerState, to state: Shadhin_Robi.AudioPlayerState)
+  func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, shouldStartPlaying item: Shadhin_Robi.AudioItem) -> Swift.Bool
+  func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, willStartPlaying item: Shadhin_Robi.AudioItem)
+  func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, didUpdateProgressionTo time: Foundation.TimeInterval, percentageRead: Swift.Float)
+  func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, didFindDuration duration: Foundation.TimeInterval, for item: Shadhin_Robi.AudioItem)
+  func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, didUpdateEmptyMetadataOn item: Shadhin_Robi.AudioItem, withData data: Shadhin_Robi.Metadata)
+  func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, didLoad range: Shadhin_Robi.TimeRange, for item: Shadhin_Robi.AudioItem)
+  func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, playerUrlError: Swift.String)
+}
+extension Shadhin_Robi.AudioPlayerDelegate {
+  public func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, didChangeStateFrom from: Shadhin_Robi.AudioPlayerState, to state: Shadhin_Robi.AudioPlayerState)
+  public func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, shouldStartPlaying item: Shadhin_Robi.AudioItem) -> Swift.Bool
+  public func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, willStartPlaying item: Shadhin_Robi.AudioItem)
+  public func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, didUpdateProgressionTo time: Foundation.TimeInterval, percentageRead: Swift.Float)
+  public func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, didFindDuration duration: Foundation.TimeInterval, for item: Shadhin_Robi.AudioItem)
+  public func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, didUpdateEmptyMetadataOn item: Shadhin_Robi.AudioItem, withData data: Shadhin_Robi.Metadata)
+  public func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, didLoad range: Shadhin_Robi.TimeRange, for item: Shadhin_Robi.AudioItem)
+  public func audioPlayer(_ audioPlayer: Shadhin_Robi.AudioPlayer, playerUrlError: Swift.String)
+}
+extension Shadhin_Robi.EKAttributes {
+  public struct UserInteraction {
+    public typealias Action = () -> ()
+    public enum Default {
+      case absorbTouches
+      case delayExit(by: Foundation.TimeInterval)
+      case dismissEntry
+      case forward
+    }
+    public var defaultAction: Shadhin_Robi.EKAttributes.UserInteraction.Default
+    public var customTapActions: [Shadhin_Robi.EKAttributes.UserInteraction.Action]
+    public init(defaultAction: Shadhin_Robi.EKAttributes.UserInteraction.Default = .absorbTouches, customTapActions: [Shadhin_Robi.EKAttributes.UserInteraction.Action] = [])
+    public static var dismiss: Shadhin_Robi.EKAttributes.UserInteraction {
+      get
+    }
+    public static var forward: Shadhin_Robi.EKAttributes.UserInteraction {
+      get
+    }
+    public static var absorbTouches: Shadhin_Robi.EKAttributes.UserInteraction {
+      get
+    }
+    public static func delayExit(by delay: Foundation.TimeInterval) -> Shadhin_Robi.EKAttributes.UserInteraction
+  }
+}
+extension Shadhin_Robi.EKAttributes {
+  public enum Scroll {
+    public struct PullbackAnimation {
+      public var duration: Foundation.TimeInterval
+      public var damping: CoreFoundation.CGFloat
+      public var initialSpringVelocity: CoreFoundation.CGFloat
+      public init(duration: Foundation.TimeInterval, damping: CoreFoundation.CGFloat, initialSpringVelocity: CoreFoundation.CGFloat)
+      public static var jolt: Shadhin_Robi.EKAttributes.Scroll.PullbackAnimation {
+        get
+      }
+      public static var easeOut: Shadhin_Robi.EKAttributes.Scroll.PullbackAnimation {
+        get
+      }
+    }
+    case disabled
+    case edgeCrossingDisabled(swipeable: Swift.Bool)
+    case enabled(swipeable: Swift.Bool, pullbackAnimation: Shadhin_Robi.EKAttributes.Scroll.PullbackAnimation)
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class EKAccessoryNoteMessageView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension Swift.Array where Element : UIKit.UIView {
+  @discardableResult
+  public func set(_ edge: Shadhin_Robi.QLAttribute, of value: CoreFoundation.CGFloat, priority: Shadhin_Robi.QLPriority = .required) -> [UIKit.NSLayoutConstraint]
+  @discardableResult
+  public func set(_ edges: Shadhin_Robi.QLAttribute..., of value: CoreFoundation.CGFloat, priority: Shadhin_Robi.QLPriority = .required) -> [Shadhin_Robi.QLMultipleConstraints]
+  @discardableResult
+  public func spread(_ axis: Shadhin_Robi.QLAxis, stretchEdgesToSuperview: Swift.Bool = false, offset: CoreFoundation.CGFloat = 0, priority: Shadhin_Robi.QLPriority = .required) -> [UIKit.NSLayoutConstraint]
+  @discardableResult
+  public func layoutToSuperview(axis: Shadhin_Robi.QLAxis, offset: CoreFoundation.CGFloat = 0, priority: Shadhin_Robi.QLPriority = .required) -> [Shadhin_Robi.QLAxisConstraints]
+  @discardableResult
+  public func layoutToSuperview(_ edge: Shadhin_Robi.QLAttribute, ratio: CoreFoundation.CGFloat = 1, offset: CoreFoundation.CGFloat = 0, priority: Shadhin_Robi.QLPriority = .required) -> [UIKit.NSLayoutConstraint]
+  @discardableResult
+  public func layout(_ firstEdge: Shadhin_Robi.QLAttribute? = nil, to anchorEdge: Shadhin_Robi.QLAttribute, of anchorView: Shadhin_Robi.QLView, ratio: CoreFoundation.CGFloat = 1, offset: CoreFoundation.CGFloat = 0, priority: Shadhin_Robi.QLPriority = .required) -> [UIKit.NSLayoutConstraint]
+  @discardableResult
+  public func layout(_ edges: Shadhin_Robi.QLAttribute..., to anchorView: Shadhin_Robi.QLView, ratio: CoreFoundation.CGFloat = 1, offset: CoreFoundation.CGFloat = 0, priority: Shadhin_Robi.QLPriority = .required) -> [Shadhin_Robi.QLMultipleConstraints]
+  public var isValidForQuickLayout: Swift.Bool {
+    get
+  }
+}
+extension Shadhin_Robi.EKAttributes {
+  public enum DisplayMode {
+    case inferred
+    case light
+    case dark
+    public static func == (a: Shadhin_Robi.EKAttributes.DisplayMode, b: Shadhin_Robi.EKAttributes.DisplayMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public typealias QLAttribute = UIKit.NSLayoutConstraint.Attribute
+public typealias QLRelation = UIKit.NSLayoutConstraint.Relation
+public typealias QLView = UIKit.UIView
+public typealias QLPriority = UIKit.UILayoutPriority
+@objc public protocol FSPagerViewDataSource : ObjectiveC.NSObjectProtocol {
+  @objc(numberOfItemsInPagerView:) func numberOfItems(in pagerView: Shadhin_Robi.FSPagerView) -> Swift.Int
+  @objc(pagerView:cellForItemAtIndex:) func pagerView(_ pagerView: Shadhin_Robi.FSPagerView, cellForItemAt index: Swift.Int) -> Shadhin_Robi.FSPagerViewCell
+}
+@objc public protocol FSPagerViewDelegate : ObjectiveC.NSObjectProtocol {
+  @objc(pagerView:shouldHighlightItemAtIndex:) optional func pagerView(_ pagerView: Shadhin_Robi.FSPagerView, shouldHighlightItemAt index: Swift.Int) -> Swift.Bool
+  @objc(pagerView:didHighlightItemAtIndex:) optional func pagerView(_ pagerView: Shadhin_Robi.FSPagerView, didHighlightItemAt index: Swift.Int)
+  @objc(pagerView:shouldSelectItemAtIndex:) optional func pagerView(_ pagerView: Shadhin_Robi.FSPagerView, shouldSelectItemAt index: Swift.Int) -> Swift.Bool
+  @objc(pagerView:didSelectItemAtIndex:) optional func pagerView(_ pagerView: Shadhin_Robi.FSPagerView, didSelectItemAt index: Swift.Int)
+  @objc(pagerView:willDisplayCell:forItemAtIndex:) optional func pagerView(_ pagerView: Shadhin_Robi.FSPagerView, willDisplay cell: Shadhin_Robi.FSPagerViewCell, forItemAt index: Swift.Int)
+  @objc(pagerView:didEndDisplayingCell:forItemAtIndex:) optional func pagerView(_ pagerView: Shadhin_Robi.FSPagerView, didEndDisplaying cell: Shadhin_Robi.FSPagerViewCell, forItemAt index: Swift.Int)
+  @objc(pagerViewWillBeginDragging:) optional func pagerViewWillBeginDragging(_ pagerView: Shadhin_Robi.FSPagerView)
+  @objc(pagerViewWillEndDragging:targetIndex:) optional func pagerViewWillEndDragging(_ pagerView: Shadhin_Robi.FSPagerView, targetIndex: Swift.Int)
+  @objc(pagerViewDidScroll:) optional func pagerViewDidScroll(_ pagerView: Shadhin_Robi.FSPagerView)
+  @objc(pagerViewDidEndScrollAnimation:) optional func pagerViewDidEndScrollAnimation(_ pagerView: Shadhin_Robi.FSPagerView)
+  @objc(pagerViewDidEndDecelerating:) optional func pagerViewDidEndDecelerating(_ pagerView: Shadhin_Robi.FSPagerView)
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class FSPagerView : UIKit.UIView, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegate {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var dataSource: Shadhin_Robi.FSPagerViewDataSource?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var delegate: Shadhin_Robi.FSPagerViewDelegate?
+  @objc @_Concurrency.MainActor(unsafe) open var scrollDirection: Shadhin_Robi.FSPagerView.ScrollDirection {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var automaticSlidingInterval: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var interitemSpacing: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var itemSize: CoreFoundation.CGSize {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isInfinite: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var decelerationDistance: Swift.UInt
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isScrollEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var bounces: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var alwaysBounceHorizontal: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var alwaysBounceVertical: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var removesInfiniteLoopForSingleItem: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var backgroundView: UIKit.UIView? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var transformer: Shadhin_Robi.FSPagerViewTransformer? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var isTracking: Swift.Bool {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var scrollOffset: CoreFoundation.CGFloat {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var panGestureRecognizer: UIKit.UIPanGestureRecognizer {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var currentIndex: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func willMove(toWindow newWindow: UIKit.UIWindow?)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, shouldHighlightItemAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, didHighlightItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, shouldSelectItemAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, didEndDisplaying cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor(unsafe) @objc public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor(unsafe) @objc public func scrollViewWillEndDragging(_ scrollView: UIKit.UIScrollView, withVelocity velocity: CoreFoundation.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer<CoreFoundation.CGPoint>)
+  @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidEndScrollingAnimation(_ scrollView: UIKit.UIScrollView)
+  @objc(registerClass:forCellWithReuseIdentifier:) @_Concurrency.MainActor(unsafe) open func register(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: Swift.String)
+  @objc(registerNib:forCellWithReuseIdentifier:) @_Concurrency.MainActor(unsafe) open func register(_ nib: UIKit.UINib?, forCellWithReuseIdentifier identifier: Swift.String)
+  @objc(dequeueReusableCellWithReuseIdentifier:atIndex:) @_Concurrency.MainActor(unsafe) open func dequeueReusableCell(withReuseIdentifier identifier: Swift.String, at index: Swift.Int) -> Shadhin_Robi.FSPagerViewCell
+  @objc(reloadData) @_Concurrency.MainActor(unsafe) open func reloadData()
+  @objc(selectItemAtIndex:animated:) @_Concurrency.MainActor(unsafe) open func selectItem(at index: Swift.Int, animated: Swift.Bool)
+  @objc(deselectItemAtIndex:animated:) @_Concurrency.MainActor(unsafe) open func deselectItem(at index: Swift.Int, animated: Swift.Bool)
+  @objc(scrollToItemAtIndex:animated:) @_Concurrency.MainActor(unsafe) open func scrollToItem(at index: Swift.Int, animated: Swift.Bool)
+  @objc(indexForCell:) @_Concurrency.MainActor(unsafe) open func index(for cell: Shadhin_Robi.FSPagerViewCell) -> Swift.Int
+  @objc(cellForItemAtIndex:) @_Concurrency.MainActor(unsafe) open func cellForItem(at index: Swift.Int) -> Shadhin_Robi.FSPagerViewCell?
+}
+extension Shadhin_Robi.FSPagerView {
+  @objc public enum ScrollDirection : Swift.Int {
+    case horizontal
+    case vertical
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor(unsafe) public static let automaticDistance: Swift.UInt
+  @_Concurrency.MainActor(unsafe) public static let automaticSize: CoreFoundation.CGSize
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BallSpinFadeIndicator : Shadhin_Robi.LBIndicator {
+  @_Concurrency.MainActor(unsafe) override open func setupAnimation(in layer: QuartzCore.CALayer, size: CoreFoundation.CGSize)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) final public class EKRatingMessageView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public init(with message: Shadhin_Robi.EKRatingMessage)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class LoadingButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public var isLoading: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var shadowAdded: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var indicator: UIKit.UIView & Shadhin_Robi.IndicatorProtocol
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var withShadow: Swift.Bool
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var cornerRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var bgColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var shadowLayer: UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) open var entireViewGroup: [UIKit.UIView] {
+    get
+  }
+  @available(iOS 13.0, *)
+  public enum ButtonStyle {
+    case fill
+    case outline
+    public static func == (a: Shadhin_Robi.LoadingButton.ButtonStyle, b: Shadhin_Robi.LoadingButton.ButtonStyle) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect = .zero, icon: UIKit.UIImage? = nil, text: Swift.String? = nil, textColor: UIKit.UIColor? = .white, font: UIKit.UIFont? = nil, bgColor: UIKit.UIColor = .clear, cornerRadius: CoreFoundation.CGFloat = 12.0, withShadow: Swift.Bool = false)
+  @available(iOS 13.0, tvOS 13.0, *)
+  @_Concurrency.MainActor(unsafe) convenience public init(icon: UIKit.UIImage? = nil, text: Swift.String? = nil, font: UIKit.UIFont? = nil, cornerRadius: CoreFoundation.CGFloat = 12.0, withShadow: Swift.Bool = false, buttonStyle: Shadhin_Robi.LoadingButton.ButtonStyle)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) open func showLoader(userInteraction: Swift.Bool, _ completion: Shadhin_Robi.LBCallback = nil)
+  @_Concurrency.MainActor(unsafe) open func showLoaderWithImage(userInteraction: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) open func showLoader(_ viewsToBeHidden: [UIKit.UIView?], userInteraction: Swift.Bool = false, _ completion: Shadhin_Robi.LBCallback = nil)
+  @_Concurrency.MainActor(unsafe) open func hideLoader(_ completion: Shadhin_Robi.LBCallback = nil)
+  @_Concurrency.MainActor(unsafe) public func fillContent()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+extension UIKit.UIActivityIndicatorView : Shadhin_Robi.IndicatorProtocol {
+  @_Concurrency.MainActor(unsafe) public var radius: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var color: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public func setupAnimation(in layer: QuartzCore.CALayer, size: CoreFoundation.CGSize)
+}
+public struct EKPopUpMessage {
+  public typealias EKPopUpMessageAction = () -> ()
+  public struct ThemeImage {
+    public enum Position {
+      case topToTop(offset: CoreFoundation.CGFloat)
+      case centerToTop(offset: CoreFoundation.CGFloat)
+    }
+    public var image: Shadhin_Robi.EKProperty.ImageContent
+    public var position: Shadhin_Robi.EKPopUpMessage.ThemeImage.Position
+    public init(image: Shadhin_Robi.EKProperty.ImageContent, position: Shadhin_Robi.EKPopUpMessage.ThemeImage.Position = .topToTop(offset: 40))
+  }
+  public var themeImage: Shadhin_Robi.EKPopUpMessage.ThemeImage?
+  public var title: Shadhin_Robi.EKProperty.LabelContent
+  public var description: Shadhin_Robi.EKProperty.LabelContent
+  public var button: Shadhin_Robi.EKProperty.ButtonContent
+  public var action: Shadhin_Robi.EKPopUpMessage.EKPopUpMessageAction
+  public init(themeImage: Shadhin_Robi.EKPopUpMessage.ThemeImage? = nil, title: Shadhin_Robi.EKProperty.LabelContent, description: Shadhin_Robi.EKProperty.LabelContent, button: Shadhin_Robi.EKProperty.ButtonContent, action: @escaping Shadhin_Robi.EKPopUpMessage.EKPopUpMessageAction)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class FSPagerViewCell : UIKit.UICollectionViewCell {
+  @objc @_Concurrency.MainActor(unsafe) open var textLabel: UIKit.UILabel? {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var imageView: UIKit.UIImageView? {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isHighlighted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+}
+@objc @_Concurrency.MainActor(unsafe) final public class EKFormMessageView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public init(with title: Shadhin_Robi.EKProperty.LabelContent, textFieldsContent: [Shadhin_Robi.EKProperty.TextFieldContent], buttonContent: Shadhin_Robi.EKProperty.ButtonContent)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) final public func becomeFirstResponder(with textFieldIndex: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc deinit
+}
+public typealias Index = Swift.Int
+public typealias Closure = () -> Swift.Void
+public typealias SelectionClosure = (Shadhin_Robi.Index, Swift.String) -> Swift.Void
+public typealias MultiSelectionClosure = ([Shadhin_Robi.Index], [Swift.String]) -> Swift.Void
+public typealias ConfigurationClosure = (Shadhin_Robi.Index, Swift.String) -> Swift.String
+public typealias CellConfigurationClosure = (Shadhin_Robi.Index, Swift.String, Shadhin_Robi.DropDownCell) -> Swift.Void
+@objc public protocol AnchorView {
+  @objc var plainView: UIKit.UIView { get }
+}
+extension UIKit.UIView : Shadhin_Robi.AnchorView {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public var plainView: UIKit.UIView {
+    @objc get
+  }
+}
+extension UIKit.UIBarButtonItem : Shadhin_Robi.AnchorView {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public var plainView: UIKit.UIView {
+    @objc get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class DropDown : UIKit.UIView {
+  public enum DismissMode {
+    case onTap
+    case automatic
+    case manual
+    public static func == (a: Shadhin_Robi.DropDown.DismissMode, b: Shadhin_Robi.DropDown.DismissMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Direction {
+    case any
+    case top
+    case bottom
+    public static func == (a: Shadhin_Robi.DropDown.Direction, b: Shadhin_Robi.DropDown.Direction) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor(unsafe) weak public static var VisibleDropDown: Shadhin_Robi.DropDown?
+  @_Concurrency.MainActor(unsafe) weak final public var anchorView: Shadhin_Robi.AnchorView? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var direction: Shadhin_Robi.DropDown.Direction
+  @_Concurrency.MainActor(unsafe) final public var topOffset: CoreFoundation.CGPoint {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var bottomOffset: CoreFoundation.CGPoint {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var offsetFromWindowBottom: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var width: CoreFoundation.CGFloat? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var arrowIndicationX: CoreFoundation.CGFloat? {
+    get
+    set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public var cellHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) final public var dimmedBackgroundColor: UIKit.UIColor {
+    get
+    set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public var selectionBackgroundColor: UIKit.UIColor
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public var separatorColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public var cornerRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public func setupCornerRadius(_ radius: CoreFoundation.CGFloat)
+  @available(iOS 11.0, *)
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public func setupMaskedCorners(_ cornerMask: QuartzCore.CACornerMask)
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public var shadowColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public var shadowOffset: CoreFoundation.CGSize {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public var shadowOpacity: Swift.Float {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public var shadowRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public var animationduration: Swift.Double
+  @_Concurrency.MainActor(unsafe) public static var animationEntranceOptions: UIKit.UIView.AnimationOptions
+  @_Concurrency.MainActor(unsafe) public static var animationExitOptions: UIKit.UIView.AnimationOptions
+  @_Concurrency.MainActor(unsafe) final public var animationEntranceOptions: UIKit.UIView.AnimationOptions
+  @_Concurrency.MainActor(unsafe) final public var animationExitOptions: UIKit.UIView.AnimationOptions
+  @_Concurrency.MainActor(unsafe) final public var downScaleTransform: CoreFoundation.CGAffineTransform {
+    get
+    set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public var textColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public var selectedTextColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic final public var textFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) final public var cellNib: UIKit.UINib {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var dataSource: [Swift.String] {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var localizationKeysDataSource: [Swift.String] {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var cellConfiguration: Shadhin_Robi.ConfigurationClosure? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var customCellConfiguration: Shadhin_Robi.CellConfigurationClosure? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var selectionAction: Shadhin_Robi.SelectionClosure?
+  @_Concurrency.MainActor(unsafe) final public var multiSelectionAction: Shadhin_Robi.MultiSelectionClosure?
+  @_Concurrency.MainActor(unsafe) final public var willShowAction: Shadhin_Robi.Closure?
+  @_Concurrency.MainActor(unsafe) final public var cancelAction: Shadhin_Robi.Closure?
+  @_Concurrency.MainActor(unsafe) final public var dismissMode: Shadhin_Robi.DropDown.DismissMode {
+    get
+    set
+  }
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc convenience dynamic public init()
+  @_Concurrency.MainActor(unsafe) convenience public init(anchorView: Shadhin_Robi.AnchorView, selectionAction: Shadhin_Robi.SelectionClosure? = nil, dataSource: [Swift.String] = [], topOffset: CoreFoundation.CGPoint? = nil, bottomOffset: CoreFoundation.CGPoint? = nil, cellConfiguration: Shadhin_Robi.ConfigurationClosure? = nil, cancelAction: Shadhin_Robi.Closure? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+}
+extension Shadhin_Robi.DropDown {
+  @_Concurrency.MainActor(unsafe) @objc override final public func updateConstraints()
+  @_Concurrency.MainActor(unsafe) @objc override final public func layoutSubviews()
+}
+extension Shadhin_Robi.DropDown {
+  @objc(show) @_Concurrency.MainActor(unsafe) final public func objc_show() -> Foundation.NSDictionary
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) final public func show(onTopOf window: UIKit.UIWindow? = nil, beforeTransform transform: CoreFoundation.CGAffineTransform? = nil, anchorPoint: CoreFoundation.CGPoint? = nil) -> (canBeDisplayed: Swift.Bool, offscreenHeight: CoreFoundation.CGFloat?)
+  @_Concurrency.MainActor(unsafe) @objc override final public func accessibilityPerformEscape() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) final public func hide()
+}
+extension Shadhin_Robi.DropDown {
+  @_Concurrency.MainActor(unsafe) final public func reloadAllComponents()
+  @_Concurrency.MainActor(unsafe) final public func selectRow(at index: Shadhin_Robi.Index?, scrollPosition: UIKit.UITableView.ScrollPosition = .none)
+  @_Concurrency.MainActor(unsafe) final public func selectRows(at indices: Swift.Set<Shadhin_Robi.Index>?)
+  @_Concurrency.MainActor(unsafe) final public func deselectRow(at index: Shadhin_Robi.Index?)
+  @_Concurrency.MainActor(unsafe) final public func deselectRows(at indices: Swift.Set<Shadhin_Robi.Index>?)
+  @_Concurrency.MainActor(unsafe) final public var indexForSelectedRow: Shadhin_Robi.Index? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public var selectedItem: Swift.String? {
+    get
+  }
+  @objc @_Concurrency.MainActor(unsafe) final public func selectRow(_ index: Swift.Int, scrollPosition: UIKit.UITableView.ScrollPosition = .none)
+  @objc @_Concurrency.MainActor(unsafe) final public func clearSelection()
+  @objc @_Concurrency.MainActor(unsafe) final public func deselectRow(_ index: Swift.Int)
+  @objc @_Concurrency.MainActor(unsafe) final public var indexPathForSelectedRow: Foundation.NSIndexPath? {
+    @objc get
+  }
+}
+extension Shadhin_Robi.DropDown : UIKit.UITableViewDataSource, UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension Shadhin_Robi.DropDown {
+  @_Concurrency.MainActor(unsafe) @objc override final public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+}
+extension Shadhin_Robi.DropDown {
+  @objc @_Concurrency.MainActor(unsafe) public static func startListeningToKeyboard()
+}
+extension Shadhin_Robi.EKAttributes {
+  public struct Animation : Swift.Equatable {
+    public struct Spring : Swift.Equatable {
+      public var damping: CoreFoundation.CGFloat
+      public var initialVelocity: CoreFoundation.CGFloat
+      public init(damping: CoreFoundation.CGFloat, initialVelocity: CoreFoundation.CGFloat)
+      public static func == (a: Shadhin_Robi.EKAttributes.Animation.Spring, b: Shadhin_Robi.EKAttributes.Animation.Spring) -> Swift.Bool
+    }
+    public struct RangeAnimation : Swift.Equatable {
+      public var duration: Foundation.TimeInterval
+      public var delay: Foundation.TimeInterval
+      public var start: CoreFoundation.CGFloat
+      public var end: CoreFoundation.CGFloat
+      public var spring: Shadhin_Robi.EKAttributes.Animation.Spring?
+      public init(from start: CoreFoundation.CGFloat, to end: CoreFoundation.CGFloat, duration: Foundation.TimeInterval, delay: Foundation.TimeInterval = 0, spring: Shadhin_Robi.EKAttributes.Animation.Spring? = nil)
+      public static func == (a: Shadhin_Robi.EKAttributes.Animation.RangeAnimation, b: Shadhin_Robi.EKAttributes.Animation.RangeAnimation) -> Swift.Bool
+    }
+    public struct Translate : Swift.Equatable {
+      public enum AnchorPosition : Swift.Equatable {
+        case top
+        case bottom
+        case automatic
+        public func hash(into hasher: inout Swift.Hasher)
+        public static func == (a: Shadhin_Robi.EKAttributes.Animation.Translate.AnchorPosition, b: Shadhin_Robi.EKAttributes.Animation.Translate.AnchorPosition) -> Swift.Bool
+        public var hashValue: Swift.Int {
+          get
+        }
+      }
+      public var duration: Foundation.TimeInterval
+      public var delay: Foundation.TimeInterval
+      public var anchorPosition: Shadhin_Robi.EKAttributes.Animation.Translate.AnchorPosition
+      public var spring: Shadhin_Robi.EKAttributes.Animation.Spring?
+      public init(duration: Foundation.TimeInterval, anchorPosition: Shadhin_Robi.EKAttributes.Animation.Translate.AnchorPosition = .automatic, delay: Foundation.TimeInterval = 0, spring: Shadhin_Robi.EKAttributes.Animation.Spring? = nil)
+      public static func == (a: Shadhin_Robi.EKAttributes.Animation.Translate, b: Shadhin_Robi.EKAttributes.Animation.Translate) -> Swift.Bool
+    }
+    public var translate: Shadhin_Robi.EKAttributes.Animation.Translate?
+    public var scale: Shadhin_Robi.EKAttributes.Animation.RangeAnimation?
+    public var fade: Shadhin_Robi.EKAttributes.Animation.RangeAnimation?
+    public var containsTranslation: Swift.Bool {
+      get
+    }
+    public var containsScale: Swift.Bool {
+      get
+    }
+    public var containsFade: Swift.Bool {
+      get
+    }
+    public var containsAnimation: Swift.Bool {
+      get
+    }
+    public var maxDelay: Foundation.TimeInterval {
+      get
+    }
+    public var maxDuration: Foundation.TimeInterval {
+      get
+    }
+    public var totalDuration: Foundation.TimeInterval {
+      get
+    }
+    public static var translation: Shadhin_Robi.EKAttributes.Animation {
+      get
+    }
+    public static var none: Shadhin_Robi.EKAttributes.Animation {
+      get
+    }
+    public init(translate: Shadhin_Robi.EKAttributes.Animation.Translate? = nil, scale: Shadhin_Robi.EKAttributes.Animation.RangeAnimation? = nil, fade: Shadhin_Robi.EKAttributes.Animation.RangeAnimation? = nil)
+    public static func == (a: Shadhin_Robi.EKAttributes.Animation, b: Shadhin_Robi.EKAttributes.Animation) -> Swift.Bool
+  }
+}
+extension Shadhin_Robi.EKAttributes {
+  public enum NotificationHapticFeedback {
+    case success
+    case warning
+    case error
+    case none
+    public static func == (a: Shadhin_Robi.EKAttributes.NotificationHapticFeedback, b: Shadhin_Robi.EKAttributes.NotificationHapticFeedback) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class DropDownCell : UIKit.UITableViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var optionLabel: UIKit.UILabel!
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension Shadhin_Robi.DropDownCell {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isHighlighted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func setHighlighted(_ highlighted: Swift.Bool, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+}
+public struct EKColor : Swift.Equatable {
+  public var dark: UIKit.UIColor {
+    get
+  }
+  public var light: UIKit.UIColor {
+    get
+  }
+  public init(light: UIKit.UIColor, dark: UIKit.UIColor)
+  public init(_ unified: UIKit.UIColor)
+  public init(rgb: Swift.Int)
+  public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int)
+  public func color(for traits: UIKit.UITraitCollection, mode: Shadhin_Robi.EKAttributes.DisplayMode) -> UIKit.UIColor
+  public static func == (a: Shadhin_Robi.EKColor, b: Shadhin_Robi.EKColor) -> Swift.Bool
+}
+extension Shadhin_Robi.EKColor {
+  public var inverted: Shadhin_Robi.EKColor {
+    get
+  }
+  public func with(alpha: CoreFoundation.CGFloat) -> Shadhin_Robi.EKColor
+  public static var white: Shadhin_Robi.EKColor {
+    get
+  }
+  public static var black: Shadhin_Robi.EKColor {
+    get
+  }
+  public static var clear: Shadhin_Robi.EKColor {
+    get
+  }
+  public static var standardBackground: Shadhin_Robi.EKColor {
+    get
+  }
+  public static var standardContent: Shadhin_Robi.EKColor {
+    get
+  }
+}
+@objc @_Concurrency.MainActor(unsafe) final public class EKButtonBarView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public init(with buttonBarContent: Shadhin_Robi.EKProperty.ButtonBarContent)
+  @_Concurrency.MainActor(unsafe) @objc override final public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) final public func expand()
+  @_Concurrency.MainActor(unsafe) final public func compress()
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc deinit
+}
+public protocol IndicatorProtocol {
+  var radius: CoreFoundation.CGFloat { get set }
+  var color: UIKit.UIColor { get set }
+  var isAnimating: Swift.Bool { get }
+  func startAnimating()
+  func stopAnimating()
+  func setupAnimation(in layer: QuartzCore.CALayer, size: CoreFoundation.CGSize)
+}
+public typealias QLMultipleConstraints = [Shadhin_Robi.QLAttribute : UIKit.NSLayoutConstraint]
+extension UIKit.UILayoutPriority {
+  public static let must: Shadhin_Robi.QLPriority
+  public static let zero: Shadhin_Robi.QLPriority
+}
+public struct QLAttributePair {
+  public let first: Shadhin_Robi.QLAttribute
+  public let second: Shadhin_Robi.QLAttribute
+}
+public struct QLSizeConstraints {
+  public let width: UIKit.NSLayoutConstraint
+  public let height: UIKit.NSLayoutConstraint
+}
+public struct QLCenterConstraints {
+  public let x: UIKit.NSLayoutConstraint
+  public let y: UIKit.NSLayoutConstraint
+}
+public struct QLAxisConstraints {
+  public let first: UIKit.NSLayoutConstraint
+  public let second: UIKit.NSLayoutConstraint
+}
+public struct QLFillConstraints {
+  public let center: Shadhin_Robi.QLCenterConstraints
+  public let size: Shadhin_Robi.QLSizeConstraints
+}
+public struct QLPriorityPair {
+  public let horizontal: Shadhin_Robi.QLPriority
+  public let vertical: Shadhin_Robi.QLPriority
+  public static var required: Shadhin_Robi.QLPriorityPair {
+    get
+  }
+  public static var must: Shadhin_Robi.QLPriorityPair {
+    get
+  }
+  public init(_ horizontal: Shadhin_Robi.QLPriority, _ vertical: Shadhin_Robi.QLPriority)
+}
+public enum QLAxis {
+  case horizontally
+  case vertically
+  public var attributes: Shadhin_Robi.QLAttributePair {
+    get
+  }
+  public static func == (a: Shadhin_Robi.QLAxis, b: Shadhin_Robi.QLAxis) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BallPulseSyncIndicator : Shadhin_Robi.LBIndicator {
+  @_Concurrency.MainActor(unsafe) override open func setupAnimation(in layer: QuartzCore.CALayer, size: CoreFoundation.CGSize)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class EKImageNoteMessageView : Shadhin_Robi.EKAccessoryNoteMessageView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public init(with content: Shadhin_Robi.EKProperty.LabelContent, imageContent: Shadhin_Robi.EKProperty.ImageContent)
+  @objc deinit
+}
+extension UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+}
+@objc @_Concurrency.MainActor(unsafe) public class EKMessageContentView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var titleContent: Shadhin_Robi.EKProperty.LabelContent! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var subtitleContent: Shadhin_Robi.EKProperty.LabelContent! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var titleAttributes: Shadhin_Robi.EKProperty.LabelStyle! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var subtitleAttributes: Shadhin_Robi.EKProperty.LabelStyle! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var title: Swift.String! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var subtitle: Swift.String! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var verticalMargins: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var horizontalMargins: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var labelsOffset: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class EKNoteMessageView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var horizontalOffset: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var verticalOffset: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public init(with content: Shadhin_Robi.EKProperty.LabelContent)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class AudioPlayer : ObjectiveC.NSObject {
+  public var currentItem: Shadhin_Robi.AudioItem? {
+    get
+  }
+  public func getPlayableUrlAndPlay(item: Shadhin_Robi.AudioItem, oldValue: Shadhin_Robi.AudioItem?)
+  public func playUrl(url: Swift.String, isLocal: Swift.Bool = false, isNewItem: Swift.Bool)
+  public func retryWhenFileExpired()
+  public var totalDurationWatched: Foundation.TimeInterval {
+    get
+  }
+  weak public var delegate: Shadhin_Robi.AudioPlayerDelegate?
+  public var maximumConnectionLossTime: Foundation.TimeInterval
+  public var adjustQualityAutomatically: Swift.Bool
+  public var defaultQuality: Shadhin_Robi.AudioQuality
+  public var adjustQualityTimeInternal: Foundation.TimeInterval {
+    get
+    set
+  }
+  public var adjustQualityAfterInterruptionCount: Swift.Int {
+    get
+    set
+  }
+  public var maximumRetryCount: Swift.Int {
+    get
+    set
+  }
+  public var retryTimeout: Foundation.TimeInterval {
+    get
+    set
+  }
+  public var resumeAfterInterruption: Swift.Bool
+  public var resumeAfterConnectionLoss: Swift.Bool
+  public var mode: Shadhin_Robi.AudioPlayerMode {
+    get
+    set
+  }
+  public var volume: Swift.Float {
+    get
+    set
+  }
+  public var rate: Swift.Float {
+    get
+    set
+  }
+  public var bufferingStrategy: Shadhin_Robi.AudioPlayerBufferingStrategy {
+    get
+    set
+  }
+  public var preferredBufferDurationBeforePlayback: Foundation.TimeInterval
+  public var preferredForwardBufferDuration: Foundation.TimeInterval
+  public enum SeekingBehavior {
+    case multiplyRate(Swift.Float)
+    case changeTime(every: Foundation.TimeInterval, delta: Foundation.TimeInterval)
+  }
+  public var seekingBehavior: Shadhin_Robi.AudioPlayer.SeekingBehavior {
+    get
+    set
+  }
+  public var state: Shadhin_Robi.AudioPlayerState {
+    get
+  }
+  public var currentQuality: Shadhin_Robi.AudioQuality {
+    get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class FSPageControl : UIKit.UIControl {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var numberOfPages: Swift.Int {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var currentPage: Swift.Int {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var itemSpacing: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var interitemSpacing: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var contentInsets: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var contentHorizontalAlignment: UIKit.UIControl.ContentHorizontalAlignment {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var hidesForSinglePage: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSublayers(of layer: QuartzCore.CALayer)
+  @objc(setStrokeColor:forState:) @_Concurrency.MainActor(unsafe) open func setStrokeColor(_ strokeColor: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc(setFillColor:forState:) @_Concurrency.MainActor(unsafe) open func setFillColor(_ fillColor: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc(setImage:forState:) @_Concurrency.MainActor(unsafe) open func setImage(_ image: UIKit.UIImage?, for state: UIKit.UIControl.State)
+  @objc(setAlpha:forState:) @_Concurrency.MainActor(unsafe) open func setAlpha(_ alpha: CoreFoundation.CGFloat, for state: UIKit.UIControl.State)
+  @objc(setPath:forState:) @_Concurrency.MainActor(unsafe) open func setPath(_ path: UIKit.UIBezierPath?, for state: UIKit.UIControl.State)
+  @objc deinit
+}
+extension UIKit.UIControl.State : Swift.Hashable {
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_Concurrency.MainActor(unsafe) final public class EKPopUpMessageView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public init(with message: Shadhin_Robi.EKPopUpMessage)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc deinit
+}
+public struct EKNotificationMessage {
+  public struct Insets {
+    public var contentInsets: UIKit.UIEdgeInsets
+    public var titleToDescription: CoreFoundation.CGFloat
+    public static var `default`: Shadhin_Robi.EKNotificationMessage.Insets
+  }
+  public let simpleMessage: Shadhin_Robi.EKSimpleMessage
+  public let auxiliary: Shadhin_Robi.EKProperty.LabelContent?
+  public let insets: Shadhin_Robi.EKNotificationMessage.Insets
+  public init(simpleMessage: Shadhin_Robi.EKSimpleMessage, auxiliary: Shadhin_Robi.EKProperty.LabelContent? = nil, insets: Shadhin_Robi.EKNotificationMessage.Insets = .default)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class EKAlertMessageView : Shadhin_Robi.EKSimpleMessageView {
+  @_Concurrency.MainActor(unsafe) public init(with message: Shadhin_Robi.EKAlertMessage)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct EKRatingMessage {
+  public typealias Selection = (Swift.Int) -> Swift.Void
+  public var initialTitle: Shadhin_Robi.EKProperty.LabelContent
+  public var initialDescription: Shadhin_Robi.EKProperty.LabelContent
+  public var ratingItems: [Shadhin_Robi.EKProperty.EKRatingItemContent]
+  public var buttonBarContent: Shadhin_Robi.EKProperty.ButtonBarContent
+  public var selection: Shadhin_Robi.EKRatingMessage.Selection!
+  public var selectedIndex: Swift.Int? {
+    get
+    set
+  }
+  public init(initialTitle: Shadhin_Robi.EKProperty.LabelContent, initialDescription: Shadhin_Robi.EKProperty.LabelContent, ratingItems: [Shadhin_Robi.EKProperty.EKRatingItemContent], buttonBarContent: Shadhin_Robi.EKProperty.ButtonBarContent, selection: Shadhin_Robi.EKRatingMessage.Selection? = nil)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class LineScaleIndicator : Shadhin_Robi.LBIndicator {
+  @_Concurrency.MainActor(unsafe) override open func setupAnimation(in layer: QuartzCore.CALayer, size: CoreFoundation.CGSize)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func makeToast(_ message: Swift.String?, duration: Foundation.TimeInterval = ToastManager.shared.duration, position: Shadhin_Robi.ToastPosition = ToastManager.shared.position, title: Swift.String? = nil, image: UIKit.UIImage? = nil, style: Shadhin_Robi.ToastStyle = ToastManager.shared.style, completion: ((_ didTap: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func makeToast(_ message: Swift.String?, duration: Foundation.TimeInterval = ToastManager.shared.duration, point: CoreFoundation.CGPoint, title: Swift.String?, image: UIKit.UIImage?, style: Shadhin_Robi.ToastStyle = ToastManager.shared.style, completion: ((_ didTap: Swift.Bool) -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) public func showToast(_ toast: UIKit.UIView, duration: Foundation.TimeInterval = ToastManager.shared.duration, position: Shadhin_Robi.ToastPosition = ToastManager.shared.position, completion: ((_ didTap: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func showToast(_ toast: UIKit.UIView, duration: Foundation.TimeInterval = ToastManager.shared.duration, point: CoreFoundation.CGPoint, completion: ((_ didTap: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func hideToast()
+  @_Concurrency.MainActor(unsafe) public func hideToast(_ toast: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func hideAllToasts(includeActivity: Swift.Bool = false, clearQueue: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) public func clearToastQueue()
+  @_Concurrency.MainActor(unsafe) public func makeToastActivity(_ position: Shadhin_Robi.ToastPosition)
+  @_Concurrency.MainActor(unsafe) public func makeToastActivity(_ point: CoreFoundation.CGPoint)
+  @_Concurrency.MainActor(unsafe) public func hideToastActivity()
+  @_Concurrency.MainActor(unsafe) public func toastViewForMessage(_ message: Swift.String?, title: Swift.String?, image: UIKit.UIImage?, style: Shadhin_Robi.ToastStyle) throws -> UIKit.UIView
+}
+public struct ToastStyle {
+  public init()
+  public var backgroundColor: UIKit.UIColor
+  public var titleColor: UIKit.UIColor
+  public var messageColor: UIKit.UIColor
+  public var maxWidthPercentage: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  public var maxHeightPercentage: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  public var horizontalPadding: CoreFoundation.CGFloat
+  public var verticalPadding: CoreFoundation.CGFloat
+  public var cornerRadius: CoreFoundation.CGFloat
+  public var titleFont: UIKit.UIFont
+  public var messageFont: UIKit.UIFont
+  public var titleAlignment: UIKit.NSTextAlignment
+  public var messageAlignment: UIKit.NSTextAlignment
+  public var titleNumberOfLines: Swift.Int
+  public var messageNumberOfLines: Swift.Int
+  public var displayShadow: Swift.Bool
+  public var shadowColor: UIKit.UIColor
+  public var shadowOpacity: Swift.Float {
+    get
+    set
+  }
+  public var shadowRadius: CoreFoundation.CGFloat
+  public var shadowOffset: CoreFoundation.CGSize
+  public var imageSize: CoreFoundation.CGSize
+  public var activitySize: CoreFoundation.CGSize
+  public var fadeDuration: Swift.Double
+  public var activityIndicatorColor: UIKit.UIColor
+  public var activityBackgroundColor: UIKit.UIColor
+}
+@_hasMissingDesignatedInitializers public class ToastManager {
+  public static let shared: Shadhin_Robi.ToastManager
+  public var style: Shadhin_Robi.ToastStyle
+  public var isTapToDismissEnabled: Swift.Bool
+  public var isQueueEnabled: Swift.Bool
+  public var duration: Swift.Double
+  public var position: Shadhin_Robi.ToastPosition
+  @objc deinit
+}
+public enum ToastPosition {
+  case top
+  case center
+  case bottom
+  public static func == (a: Shadhin_Robi.ToastPosition, b: Shadhin_Robi.ToastPosition) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol ShadhinCoreNotifier : ObjectiveC.NSObjectProtocol {
+  @objc func tokenStatus(token isValid: Swift.Bool, error: Swift.String?)
+  @objc func patchError(error: Swift.String)
+  @objc func amarTuneError(error: Swift.String?)
+  @objc func rcError(error: Swift.String?)
+  @objc func shareContentWithRC(rc code: Swift.String)
+}
+extension Shadhin_Robi.EKAttributes {
+  public static var `default`: Shadhin_Robi.EKAttributes
+  public static var toast: Shadhin_Robi.EKAttributes {
+    get
+  }
+  public static var float: Shadhin_Robi.EKAttributes {
+    get
+  }
+  public static var topFloat: Shadhin_Robi.EKAttributes {
+    get
+  }
+  public static var bottomFloat: Shadhin_Robi.EKAttributes {
+    get
+  }
+  public static var centerFloat: Shadhin_Robi.EKAttributes {
+    get
+  }
+  public static var bottomToast: Shadhin_Robi.EKAttributes {
+    get
+  }
+  public static var topToast: Shadhin_Robi.EKAttributes {
+    get
+  }
+  public static var topNote: Shadhin_Robi.EKAttributes {
+    get
+  }
+  public static var bottomNote: Shadhin_Robi.EKAttributes {
+    get
+  }
+  public static var statusBar: Shadhin_Robi.EKAttributes {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class EKNotificationMessageView : Shadhin_Robi.EKSimpleMessageView {
+  @_Concurrency.MainActor(unsafe) public init(with message: Shadhin_Robi.EKNotificationMessage)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class EKRatingSymbolsContainerView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) final public func setup(with message: Shadhin_Robi.EKRatingMessage, externalSelection: @escaping Shadhin_Robi.EKRatingMessage.Selection)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class EKSimpleMessageView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc deinit
+}
+public typealias LBCallback = (() -> Swift.Void)?
+extension UIKit.UIColor {
+  public func RGBtoCMYK(red: CoreFoundation.CGFloat, green: CoreFoundation.CGFloat, blue: CoreFoundation.CGFloat) -> (cyan: CoreFoundation.CGFloat, magenta: CoreFoundation.CGFloat, yellow: CoreFoundation.CGFloat, key: CoreFoundation.CGFloat)
+  public func CMYKtoRGB(cyan: CoreFoundation.CGFloat, magenta: CoreFoundation.CGFloat, yellow: CoreFoundation.CGFloat, key: CoreFoundation.CGFloat) -> (red: CoreFoundation.CGFloat, green: CoreFoundation.CGFloat, blue: CoreFoundation.CGFloat)
+  public func getColorTint() -> UIKit.UIColor
+}
+extension UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public func setImage(_ image: UIKit.UIImage?)
+  @_Concurrency.MainActor(unsafe) public func setTitle(_ text: Swift.String?)
+}
+extension UIKit.UIImage {
+  convenience public init?(_ color: UIKit.UIColor, size: CoreFoundation.CGSize = CGSize(width: 1, height: 1))
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func setCornerBorder(color: UIKit.UIColor? = nil, cornerRadius: CoreFoundation.CGFloat = 15.0, borderWidth: CoreFoundation.CGFloat = 1.5)
+  @_Concurrency.MainActor(unsafe) public func setAsShadow(bounds: CoreFoundation.CGRect, cornerRadius: CoreFoundation.CGFloat = 0.0, shadowRadius: CoreFoundation.CGFloat = 1)
+  @_Concurrency.MainActor(unsafe) public func addSubViews(_ views: [UIKit.UIView])
+  @_Concurrency.MainActor(unsafe) public func centerSubView(_ view: UIKit.UIView)
+}
+infix operator |> : AdditionPrecedence
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class FSPagerViewLayoutAttributes : UIKit.UICollectionViewLayoutAttributes {
+  @_Concurrency.MainActor(unsafe) open var position: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func isEqual(_ object: Any?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+  @objc deinit
+}
+extension Shadhin_Robi.EKAttributes {
+  public enum RoundCorners {
+    case none
+    case all(radius: CoreFoundation.CGFloat)
+    case top(radius: CoreFoundation.CGFloat)
+    case bottom(radius: CoreFoundation.CGFloat)
+  }
+  public enum Border {
+    case none
+    case value(color: UIKit.UIColor, width: CoreFoundation.CGFloat)
+  }
+}
+extension Shadhin_Robi.EKAttributes {
+  public enum PopBehavior {
+    case overridden
+    case animated(animation: Shadhin_Robi.EKAttributes.Animation)
+    public var isOverriden: Swift.Bool {
+      get
+    }
+  }
+}
+extension Shadhin_Robi.EKAttributes {
+  public struct LifecycleEvents {
+    public typealias Event = () -> Swift.Void
+    public var willAppear: Shadhin_Robi.EKAttributes.LifecycleEvents.Event?
+    public var didAppear: Shadhin_Robi.EKAttributes.LifecycleEvents.Event?
+    public var willDisappear: Shadhin_Robi.EKAttributes.LifecycleEvents.Event?
+    public var didDisappear: Shadhin_Robi.EKAttributes.LifecycleEvents.Event?
+    public init(willAppear: Shadhin_Robi.EKAttributes.LifecycleEvents.Event? = nil, didAppear: Shadhin_Robi.EKAttributes.LifecycleEvents.Event? = nil, willDisappear: Shadhin_Robi.EKAttributes.LifecycleEvents.Event? = nil, didDisappear: Shadhin_Robi.EKAttributes.LifecycleEvents.Event? = nil)
+  }
+}
+extension Shadhin_Robi.EKAttributes {
+  public typealias DisplayDuration = Foundation.TimeInterval
+}
+@objc @_Concurrency.MainActor(unsafe) public class EKXStatusBarMessageView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public init(leading: Shadhin_Robi.EKProperty.LabelContent, trailing: Shadhin_Robi.EKProperty.LabelContent)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class LineScalePulseIndicator : Shadhin_Robi.LBIndicator {
+  @_Concurrency.MainActor(unsafe) override open func setupAnimation(in layer: QuartzCore.CALayer, size: CoreFoundation.CGSize)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public enum FSPagerViewTransformerType : Swift.Int {
+  case crossFading
+  case zoomOut
+  case depth
+  case overlap
+  case linear
+  case coverFlow
+  case ferrisWheel
+  case invertedFerrisWheel
+  case cubic
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc open class FSPagerViewTransformer : ObjectiveC.NSObject {
+  weak open var pagerView: Shadhin_Robi.FSPagerView? {
+    get
+  }
+  open var type: Shadhin_Robi.FSPagerViewTransformerType {
+    get
+  }
+  @objc open var minimumScale: CoreFoundation.CGFloat
+  @objc open var minimumAlpha: CoreFoundation.CGFloat
+  @objc public init(type: Shadhin_Robi.FSPagerViewTransformerType)
+  open func applyTransform(to attributes: Shadhin_Robi.FSPagerViewLayoutAttributes)
+  open func proposedInteritemSpacing() -> CoreFoundation.CGFloat
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class MaterialLoadingIndicator : Shadhin_Robi.LBIndicator {
+  @_Concurrency.MainActor(unsafe) override open var color: UIKit.UIColor {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var lineWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var bounds: CoreFoundation.CGRect {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) convenience public init(radius: CoreFoundation.CGFloat = 18.0, color: UIKit.UIColor = .gray)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) override open func startAnimating()
+  @_Concurrency.MainActor(unsafe) override open func stopAnimating()
+  @_Concurrency.MainActor(unsafe) override open func setupAnimation(in layer: QuartzCore.CALayer, size: CoreFoundation.CGSize)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class EKProcessingNoteMessageView : Shadhin_Robi.EKAccessoryNoteMessageView {
+  @_Concurrency.MainActor(unsafe) public var isProcessing: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public init(with content: Shadhin_Robi.EKProperty.LabelContent, activityIndicator: UIKit.UIActivityIndicatorView.Style)
+  @objc deinit
+}
+public typealias TimeRange = (earliest: Foundation.TimeInterval, latest: Foundation.TimeInterval)
+extension Shadhin_Robi.AudioPlayer {
+  public var currentItemProgression: Foundation.TimeInterval? {
+    get
+  }
+  public var currentItemDuration: Foundation.TimeInterval? {
+    get
+  }
+  public var currentItemSeekableRange: Shadhin_Robi.TimeRange? {
+    get
+  }
+  public var currentItemLoadedRange: Shadhin_Robi.TimeRange? {
+    get
+  }
+  public var currentItemLoadedAhead: Foundation.TimeInterval? {
+    get
+  }
+}
+public struct EKProperty {
+  public struct ButtonContent {
+    public typealias Action = () -> ()
+    public var label: Shadhin_Robi.EKProperty.LabelContent
+    public var backgroundColor: Shadhin_Robi.EKColor
+    public var highlightedBackgroundColor: Shadhin_Robi.EKColor
+    public var contentEdgeInset: CoreFoundation.CGFloat
+    public var displayMode: Shadhin_Robi.EKAttributes.DisplayMode
+    public var accessibilityIdentifier: Swift.String?
+    public var action: Shadhin_Robi.EKProperty.ButtonContent.Action?
+    public init(label: Shadhin_Robi.EKProperty.LabelContent, backgroundColor: Shadhin_Robi.EKColor, highlightedBackgroundColor: Shadhin_Robi.EKColor, contentEdgeInset: CoreFoundation.CGFloat = 5, displayMode: Shadhin_Robi.EKAttributes.DisplayMode = .inferred, accessibilityIdentifier: Swift.String? = nil, action: @escaping Shadhin_Robi.EKProperty.ButtonContent.Action = {})
+    public func backgroundColor(for traitCollection: UIKit.UITraitCollection) -> UIKit.UIColor
+    public func highlightedBackgroundColor(for traitCollection: UIKit.UITraitCollection) -> UIKit.UIColor
+    public func highlighedLabelColor(for traitCollection: UIKit.UITraitCollection) -> UIKit.UIColor
+  }
+  public struct LabelContent {
+    public var text: Swift.String
+    public var style: Shadhin_Robi.EKProperty.LabelStyle
+    public var accessibilityIdentifier: Swift.String?
+    public init(text: Swift.String, style: Shadhin_Robi.EKProperty.LabelStyle, accessibilityIdentifier: Swift.String? = nil)
+  }
+  public struct LabelStyle {
+    public var font: UIKit.UIFont
+    public var color: Shadhin_Robi.EKColor
+    public var alignment: UIKit.NSTextAlignment
+    public var numberOfLines: Swift.Int
+    public var displayMode: Shadhin_Robi.EKAttributes.DisplayMode
+    public init(font: UIKit.UIFont, color: Shadhin_Robi.EKColor, alignment: UIKit.NSTextAlignment = .left, displayMode: Shadhin_Robi.EKAttributes.DisplayMode = .inferred, numberOfLines: Swift.Int = 0)
+    public func color(for traitCollection: UIKit.UITraitCollection) -> UIKit.UIColor
+  }
+  public struct ImageContent {
+    public enum TransformAnimation {
+      case animate(duration: Foundation.TimeInterval, options: UIKit.UIView.AnimationOptions, transform: CoreFoundation.CGAffineTransform)
+      case none
+    }
+    public var tint: Shadhin_Robi.EKColor?
+    public var images: [UIKit.UIImage]
+    public var imageSequenceAnimationDuration: Foundation.TimeInterval
+    public var size: CoreFoundation.CGSize?
+    public var contentMode: UIKit.UIView.ContentMode
+    public var makesRound: Swift.Bool
+    public var animation: Shadhin_Robi.EKProperty.ImageContent.TransformAnimation
+    public var displayMode: Shadhin_Robi.EKAttributes.DisplayMode
+    public var accessibilityIdentifier: Swift.String?
+    public init(imageName: Swift.String, animation: Shadhin_Robi.EKProperty.ImageContent.TransformAnimation = .none, displayMode: Shadhin_Robi.EKAttributes.DisplayMode = .inferred, size: CoreFoundation.CGSize? = nil, contentMode: UIKit.UIView.ContentMode = .scaleToFill, tint: Shadhin_Robi.EKColor? = nil, makesRound: Swift.Bool = false, accessibilityIdentifier: Swift.String? = nil)
+    public init(image: UIKit.UIImage, animation: Shadhin_Robi.EKProperty.ImageContent.TransformAnimation = .none, displayMode: Shadhin_Robi.EKAttributes.DisplayMode = .inferred, size: CoreFoundation.CGSize? = nil, tint: Shadhin_Robi.EKColor? = nil, contentMode: UIKit.UIView.ContentMode = .scaleToFill, makesRound: Swift.Bool = false, accessibilityIdentifier: Swift.String? = nil)
+    public init(images: [UIKit.UIImage], imageSequenceAnimationDuration: Foundation.TimeInterval = 1, displayMode: Shadhin_Robi.EKAttributes.DisplayMode = .inferred, animation: Shadhin_Robi.EKProperty.ImageContent.TransformAnimation = .none, size: CoreFoundation.CGSize? = nil, tint: Shadhin_Robi.EKColor? = nil, contentMode: UIKit.UIView.ContentMode = .scaleToFill, makesRound: Swift.Bool = false, accessibilityIdentifier: Swift.String? = nil)
+    public init(imagesNames: [Swift.String], imageSequenceAnimationDuration: Foundation.TimeInterval = 1, displayMode: Shadhin_Robi.EKAttributes.DisplayMode = .inferred, animation: Shadhin_Robi.EKProperty.ImageContent.TransformAnimation = .none, size: CoreFoundation.CGSize? = nil, tint: Shadhin_Robi.EKColor? = nil, contentMode: UIKit.UIView.ContentMode = .scaleToFill, makesRound: Swift.Bool = false, accessibilityIdentifier: Swift.String? = nil)
+    public static func thumb(with image: UIKit.UIImage, edgeSize: CoreFoundation.CGFloat) -> Shadhin_Robi.EKProperty.ImageContent
+    public static func thumb(with imageName: Swift.String, edgeSize: CoreFoundation.CGFloat) -> Shadhin_Robi.EKProperty.ImageContent
+    public func tintColor(for traitCollection: UIKit.UITraitCollection) -> UIKit.UIColor?
+  }
+  public struct TextFieldContent {
+    weak public var delegate: UIKit.UITextFieldDelegate?
+    public var keyboardType: UIKit.UIKeyboardType
+    public var isSecure: Swift.Bool
+    public var leadingImage: UIKit.UIImage!
+    public var placeholder: Shadhin_Robi.EKProperty.LabelContent
+    public var textStyle: Shadhin_Robi.EKProperty.LabelStyle
+    public var tintColor: Shadhin_Robi.EKColor!
+    public var displayMode: Shadhin_Robi.EKAttributes.DisplayMode
+    public var bottomBorderColor: Shadhin_Robi.EKColor
+    public var accessibilityIdentifier: Swift.String?
+    public var textContent: Swift.String {
+      get
+      set
+    }
+    public init(delegate: UIKit.UITextFieldDelegate? = nil, keyboardType: UIKit.UIKeyboardType = .default, placeholder: Shadhin_Robi.EKProperty.LabelContent, tintColor: Shadhin_Robi.EKColor? = nil, displayMode: Shadhin_Robi.EKAttributes.DisplayMode = .inferred, textStyle: Shadhin_Robi.EKProperty.LabelStyle, isSecure: Swift.Bool = false, leadingImage: UIKit.UIImage? = nil, bottomBorderColor: Shadhin_Robi.EKColor = .clear, accessibilityIdentifier: Swift.String? = nil)
+    public func tintColor(for traitCollection: UIKit.UITraitCollection) -> UIKit.UIColor?
+    public func bottomBorderColor(for traitCollection: UIKit.UITraitCollection) -> UIKit.UIColor?
+  }
+  public struct ButtonBarContent {
+    public var content: [Shadhin_Robi.EKProperty.ButtonContent]
+    public var separatorColor: Shadhin_Robi.EKColor
+    public var horizontalDistributionThreshold: Swift.Int
+    public var expandAnimatedly: Swift.Bool
+    public var buttonHeight: CoreFoundation.CGFloat
+    public var displayMode: Shadhin_Robi.EKAttributes.DisplayMode
+    public init(with buttonContents: Shadhin_Robi.EKProperty.ButtonContent..., separatorColor: Shadhin_Robi.EKColor, horizontalDistributionThreshold: Swift.Int = 2, buttonHeight: CoreFoundation.CGFloat = 50, displayMode: Shadhin_Robi.EKAttributes.DisplayMode = .inferred, expandAnimatedly: Swift.Bool)
+    public init(with buttonContents: [Shadhin_Robi.EKProperty.ButtonContent], separatorColor: Shadhin_Robi.EKColor, horizontalDistributionThreshold: Swift.Int = 2, buttonHeight: CoreFoundation.CGFloat = 50, displayMode: Shadhin_Robi.EKAttributes.DisplayMode = .inferred, expandAnimatedly: Swift.Bool)
+    public func separatorColor(for traitCollection: UIKit.UITraitCollection) -> UIKit.UIColor
+  }
+  public struct EKRatingItemContent {
+    public var title: Shadhin_Robi.EKProperty.LabelContent
+    public var description: Shadhin_Robi.EKProperty.LabelContent
+    public var unselectedImage: Shadhin_Robi.EKProperty.ImageContent
+    public var selectedImage: Shadhin_Robi.EKProperty.ImageContent
+    public var size: CoreFoundation.CGSize
+    public init(title: Shadhin_Robi.EKProperty.LabelContent, description: Shadhin_Robi.EKProperty.LabelContent, unselectedImage: Shadhin_Robi.EKProperty.ImageContent, selectedImage: Shadhin_Robi.EKProperty.ImageContent, size: CoreFoundation.CGSize = CGSize(width: 50, height: 50))
+  }
+}
+public struct UIImageColors {
+  public var background: UIKit.UIColor!
+  public var primary: UIKit.UIColor!
+  public var secondary: UIKit.UIColor!
+  public var detail: UIKit.UIColor!
+  public init(background: UIKit.UIColor, primary: UIKit.UIColor, secondary: UIKit.UIColor, detail: UIKit.UIColor)
+}
+public enum UIImageColorsQuality : CoreFoundation.CGFloat {
+  case lowest
+  case low
+  case high
+  case highest
+  public init?(rawValue: CoreFoundation.CGFloat)
+  public typealias RawValue = CoreFoundation.CGFloat
+  public var rawValue: CoreFoundation.CGFloat {
+    get
+  }
+}
+extension UIKit.UIImage {
+  public func getColors(quality: Shadhin_Robi.UIImageColorsQuality = .high, _ completion: @escaping (Shadhin_Robi.UIImageColors?) -> Swift.Void)
+  public func getColors(quality: Shadhin_Robi.UIImageColorsQuality = .high) -> Shadhin_Robi.UIImageColors?
+}
+public struct EKAlertMessage {
+  public enum ImagePosition {
+    case top
+    case left
+    public static func == (a: Shadhin_Robi.EKAlertMessage.ImagePosition, b: Shadhin_Robi.EKAlertMessage.ImagePosition) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let imagePosition: Shadhin_Robi.EKAlertMessage.ImagePosition
+  public let simpleMessage: Shadhin_Robi.EKSimpleMessage
+  public let buttonBarContent: Shadhin_Robi.EKProperty.ButtonBarContent
+  public init(simpleMessage: Shadhin_Robi.EKSimpleMessage, imagePosition: Shadhin_Robi.EKAlertMessage.ImagePosition = .top, buttonBarContent: Shadhin_Robi.EKProperty.ButtonBarContent)
+}
+extension Shadhin_Robi.EKAttributes {
+  public enum Shadow {
+    case none
+    case active(with: Shadhin_Robi.EKAttributes.Shadow.Value)
+    public struct Value {
+      public let radius: CoreFoundation.CGFloat
+      public let opacity: Swift.Float
+      public let color: Shadhin_Robi.EKColor
+      public let offset: CoreFoundation.CGSize
+      public init(color: Shadhin_Robi.EKColor = .black, opacity: Swift.Float, radius: CoreFoundation.CGFloat, offset: CoreFoundation.CGSize = .zero)
+    }
+  }
+}
+public struct EntryPoint {
+  public static let Home: Swift.String
+  public static let LatestRelease: Swift.String
+  public static let PopularArtist: Swift.String
+  public static let PopularVideo: Swift.String
+  public static let Podcast: Swift.String
+}
+@objc @_Concurrency.MainActor(unsafe) final public class EKRatingSymbolView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) final public var isSelected: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public init(unselectedImage: Shadhin_Robi.EKProperty.ImageContent, selectedImage: Shadhin_Robi.EKProperty.ImageContent, selection: @escaping Shadhin_Robi.EKRatingMessage.Selection)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol URLConvertible {
+  func asURL() throws -> Foundation.URL
+}
+extension Swift.String : Shadhin_Robi.URLConvertible {
+  public func asURL() throws -> Foundation.URL
+}
+extension Foundation.URL : Shadhin_Robi.URLConvertible {
+  public func asURL() throws -> Foundation.URL
+}
+extension Foundation.URLComponents : Shadhin_Robi.URLConvertible {
+  public func asURL() throws -> Foundation.URL
+}
+extension Shadhin_Robi.EKAttributes {
+  public enum WindowLevel {
+    case alerts
+    case statusBar
+    case normal
+    case custom(level: UIKit.UIWindow.Level)
+    public var value: UIKit.UIWindow.Level {
+      get
+    }
+  }
+}
+extension Shadhin_Robi.EKAttributes {
+  public enum Precedence {
+    public struct Priority : Swift.Hashable, Swift.Equatable, Swift.RawRepresentable, Swift.Comparable {
+      public var rawValue: Swift.Int
+      public var hashValue: Swift.Int {
+        get
+      }
+      public init(_ rawValue: Swift.Int)
+      public init(rawValue: Swift.Int)
+      public static func == (lhs: Shadhin_Robi.EKAttributes.Precedence.Priority, rhs: Shadhin_Robi.EKAttributes.Precedence.Priority) -> Swift.Bool
+      public static func < (lhs: Shadhin_Robi.EKAttributes.Precedence.Priority, rhs: Shadhin_Robi.EKAttributes.Precedence.Priority) -> Swift.Bool
+      public typealias RawValue = Swift.Int
+    }
+    public enum QueueingHeuristic {
+      public static var value: Shadhin_Robi.EKAttributes.Precedence.QueueingHeuristic
+      case chronological
+      case priority
+      public static func == (a: Shadhin_Robi.EKAttributes.Precedence.QueueingHeuristic, b: Shadhin_Robi.EKAttributes.Precedence.QueueingHeuristic) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    case override(priority: Shadhin_Robi.EKAttributes.Precedence.Priority, dropEnqueuedEntries: Swift.Bool)
+    case enqueue(priority: Shadhin_Robi.EKAttributes.Precedence.Priority)
+    public var priority: Shadhin_Robi.EKAttributes.Precedence.Priority {
+      get
+      set
+    }
+  }
+}
+extension Shadhin_Robi.EKAttributes.Precedence.Priority {
+  public static let maxRawValue: Swift.Int
+  public static let highRawValue: Swift.Int
+  public static let normalRawValue: Swift.Int
+  public static let lowRawValue: Swift.Int
+  public static let minRawValue: Swift.Int
+  public static let max: Shadhin_Robi.EKAttributes.Precedence.Priority
+  public static let high: Shadhin_Robi.EKAttributes.Precedence.Priority
+  public static let normal: Shadhin_Robi.EKAttributes.Precedence.Priority
+  public static let low: Shadhin_Robi.EKAttributes.Precedence.Priority
+  public static let min: Shadhin_Robi.EKAttributes.Precedence.Priority
+}
+extension Shadhin_Robi.AudioPlayer {
+  public var items: [Shadhin_Robi.AudioItem]? {
+    get
+  }
+  public var currentItemIndexInQueue: Swift.Int? {
+    get
+  }
+  public var hasNext: Swift.Bool {
+    get
+  }
+  public var hasPrevious: Swift.Bool {
+    get
+  }
+  public func play(item: Shadhin_Robi.AudioItem)
+  public func play(items: [Shadhin_Robi.AudioItem], startAtIndex index: Swift.Int = 0)
+  public func add(item: Shadhin_Robi.AudioItem)
+  public func add(items: [Shadhin_Robi.AudioItem])
+  public func removeItem(at index: Swift.Int)
+}
+prefix operator ^
+@_hasMissingDesignatedInitializers final public class RevocationTrustEvaluator {
+  public struct Options : Swift.OptionSet {
+    public let rawValue: CoreFoundation.CFOptionFlags
+    public init(rawValue: CoreFoundation.CFOptionFlags)
+    public typealias ArrayLiteralElement = Shadhin_Robi.RevocationTrustEvaluator.Options
+    public typealias Element = Shadhin_Robi.RevocationTrustEvaluator.Options
+    public typealias RawValue = CoreFoundation.CFOptionFlags
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BallBeatIndicator : Shadhin_Robi.LBIndicator {
+  @_Concurrency.MainActor(unsafe) override open func setupAnimation(in layer: QuartzCore.CALayer, size: CoreFoundation.CGSize)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class SDDownloadManager : ObjectiveC.NSObject {
+  public typealias DownloadCompletionBlock = (_ error: Swift.Error?, _ fileUrl: Foundation.URL?) -> Swift.Void
+  public typealias DownloadProgressBlock = (_ progress: CoreFoundation.CGFloat) -> Swift.Void
+  public typealias BackgroundDownloadCompletionHandler = () -> Swift.Void
+  final public var backgroundCompletionHandler: Shadhin_Robi.SDDownloadManager.BackgroundDownloadCompletionHandler?
+  final public var showLocalNotificationOnBackgroundDownloadDone: Swift.Bool
+  final public var localNotificationText: Swift.String?
+  public static let shared: Shadhin_Robi.SDDownloadManager
+  final public func downloadFile(withRequest request: Foundation.URLRequest, inDirectory directory: Swift.String? = nil, withName fileName: Swift.String? = nil, shouldDownloadInBackground: Swift.Bool = true, onProgress progressBlock: Shadhin_Robi.SDDownloadManager.DownloadProgressBlock? = nil, onCompletion completionBlock: @escaping Shadhin_Robi.SDDownloadManager.DownloadCompletionBlock) -> Swift.String?
+  final public func getDownloadKey(withUrl url: Foundation.URL) -> Swift.String
+  final public func currentDownloads() -> [Swift.String]
+  final public func cancelAllDownloads()
+  final public func cancelDownload(forUniqueKey key: Swift.String?)
+  final public func pause(forUniqueKey key: Swift.String?)
+  final public func resume(forUniqueKey key: Swift.String?)
+  final public func isDownloadInProgress(forKey key: Swift.String?) -> Swift.Bool
+  final public func alterDownload(withKey key: Swift.String?, onProgress progressBlock: Shadhin_Robi.SDDownloadManager.DownloadProgressBlock?, onCompletion completionBlock: @escaping Shadhin_Robi.SDDownloadManager.DownloadCompletionBlock)
+  @objc deinit
+}
+extension Shadhin_Robi.SDDownloadManager : Foundation.URLSessionDelegate, Foundation.URLSessionDownloadDelegate {
+  @objc final public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+  @objc final public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
+  @objc final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  @objc final public func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
+}
+@objc @_Concurrency.MainActor(unsafe) final public class EKTextField : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) final public var text: Swift.String {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public init(with content: Shadhin_Robi.EKProperty.TextFieldContent)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) final public func makeFirstResponder()
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc deinit
+}
+public struct EKSimpleMessage {
+  public let image: Shadhin_Robi.EKProperty.ImageContent?
+  public let title: Shadhin_Robi.EKProperty.LabelContent
+  public let description: Shadhin_Robi.EKProperty.LabelContent
+  public init(image: Shadhin_Robi.EKProperty.ImageContent? = nil, title: Shadhin_Robi.EKProperty.LabelContent, description: Shadhin_Robi.EKProperty.LabelContent)
+}
+public struct EKAttributes {
+  public var name: Swift.String?
+  public var windowLevel: Shadhin_Robi.EKAttributes.WindowLevel
+  public var position: Shadhin_Robi.EKAttributes.Position
+  public var precedence: Shadhin_Robi.EKAttributes.Precedence
+  public var displayDuration: Swift.Double
+  public var positionConstraints: Shadhin_Robi.EKAttributes.PositionConstraints
+  public var screenInteraction: Shadhin_Robi.EKAttributes.UserInteraction
+  public var entryInteraction: Shadhin_Robi.EKAttributes.UserInteraction
+  public var scroll: Shadhin_Robi.EKAttributes.Scroll
+  public var hapticFeedbackType: Shadhin_Robi.EKAttributes.NotificationHapticFeedback
+  public var lifecycleEvents: Shadhin_Robi.EKAttributes.LifecycleEvents
+  public var displayMode: Shadhin_Robi.EKAttributes.DisplayMode
+  public var entryBackground: Shadhin_Robi.EKAttributes.BackgroundStyle
+  public var screenBackground: Shadhin_Robi.EKAttributes.BackgroundStyle
+  public var shadow: Shadhin_Robi.EKAttributes.Shadow
+  public var roundCorners: Shadhin_Robi.EKAttributes.RoundCorners
+  public var border: Shadhin_Robi.EKAttributes.Border
+  public var statusBar: Shadhin_Robi.EKAttributes.StatusBar
+  public var entranceAnimation: Shadhin_Robi.EKAttributes.Animation
+  public var exitAnimation: Shadhin_Robi.EKAttributes.Animation
+  public var popBehavior: Shadhin_Robi.EKAttributes.PopBehavior {
+    get
+    set
+  }
+  public init()
+  public init(with height: CoreFoundation.CGFloat)
+}
+extension Shadhin_Robi.EKAttributes {
+  public enum Position {
+    case top
+    case bottom
+    case center
+    public var isTop: Swift.Bool {
+      get
+    }
+    public var isCenter: Swift.Bool {
+      get
+    }
+    public var isBottom: Swift.Bool {
+      get
+    }
+    public static func == (a: Shadhin_Robi.EKAttributes.Position, b: Shadhin_Robi.EKAttributes.Position) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension Shadhin_Robi.DropDown {
+  @_Concurrency.MainActor(unsafe) final public class func setupDefaultAppearance()
+}
+@_hasMissingDesignatedInitializers final public class SwiftEntryKit {
+  public enum EntryDismissalDescriptor {
+    case specific(entryName: Swift.String)
+    case prioritizedLowerOrEqualTo(priority: Shadhin_Robi.EKAttributes.Precedence.Priority)
+    case enqueued
+    case all
+    case displayed
+  }
+  public enum RollbackWindow {
+    case main
+    case custom(window: UIKit.UIWindow)
+  }
+  public typealias DismissCompletionHandler = () -> Swift.Void
+  final public class var window: UIKit.UIWindow? {
+    get
+  }
+  final public class var isCurrentlyDisplaying: Swift.Bool {
+    get
+  }
+  final public class func isCurrentlyDisplaying(entryNamed name: Swift.String? = nil) -> Swift.Bool
+  final public class var isQueueEmpty: Swift.Bool {
+    get
+  }
+  final public class func queueContains(entryNamed name: Swift.String? = nil) -> Swift.Bool
+  final public class func display(entry view: UIKit.UIView, using attributes: Shadhin_Robi.EKAttributes, presentInsideKeyWindow: Swift.Bool = false, rollbackWindow: Shadhin_Robi.SwiftEntryKit.RollbackWindow = .main)
+  final public class func display(entry viewController: UIKit.UIViewController, using attributes: Shadhin_Robi.EKAttributes, presentInsideKeyWindow: Swift.Bool = false, rollbackWindow: Shadhin_Robi.SwiftEntryKit.RollbackWindow = .main)
+  final public class func transform(to view: UIKit.UIView)
+  final public class func dismiss(_ descriptor: Shadhin_Robi.SwiftEntryKit.EntryDismissalDescriptor = .displayed, with completion: Shadhin_Robi.SwiftEntryKit.DismissCompletionHandler? = nil)
+  final public class func layoutIfNeeded()
+  @objc deinit
+}
+public typealias Image = UIKit.UIImage
+public enum AudioQuality : Swift.Int {
+  case low
+  case medium
+  case high
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct AudioItemURL {
+  public let quality: Shadhin_Robi.AudioQuality
+  public var url: Foundation.URL
+  public init?(quality: Shadhin_Robi.AudioQuality, url: Foundation.URL?)
+}
+@objc open class AudioItem : ObjectiveC.NSObject {
+  final public let soundURLs: [Shadhin_Robi.AudioQuality : Foundation.URL]
+  public var contentId: Swift.String?
+  public var contentType: Swift.String?
+  public var podcastShowCode: Swift.String?
+  public var trackType: Swift.String?
+  public var urlKey: Swift.String?
+  convenience public init?(highQualitySoundURL: Foundation.URL? = nil, mediumQualitySoundURL: Foundation.URL? = nil, lowQualitySoundURL: Foundation.URL? = nil)
+  public init?(soundURLs: [Shadhin_Robi.AudioQuality : Foundation.URL])
+  open var highestQualityURL: Shadhin_Robi.AudioItemURL {
+    get
+  }
+  open var mediumQualityURL: Shadhin_Robi.AudioItemURL {
+    get
+  }
+  open var lowestQualityURL: Shadhin_Robi.AudioItemURL {
+    get
+  }
+  @objc dynamic open var artist: Swift.String?
+  @objc dynamic open var title: Swift.String?
+  @objc dynamic open var album: Swift.String?
+  @objc dynamic open var trackCount: Foundation.NSNumber?
+  @objc dynamic open var trackNumber: Foundation.NSNumber?
+  open var artworkImage: Shadhin_Robi.Image? {
+    get
+    set
+  }
+  @objc dynamic open var artwork: MediaPlayer.MPMediaItemArtwork?
+  open func parseMetadata(_ items: [AVFoundation.AVMetadataItem])
+  @objc deinit
+}
+public enum ReachabilityError : Swift.Error {
+  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
+  case failedToCreateWithHostname(Swift.String, Swift.Int32)
+  case unableToSetCallback(Swift.Int32)
+  case unableToSetDispatchQueue(Swift.Int32)
+  case unableToGetFlags(Swift.Int32)
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+extension Foundation.NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+public class Reachability {
+  public typealias NetworkReachable = (Shadhin_Robi.Reachability) -> ()
+  public typealias NetworkUnreachable = (Shadhin_Robi.Reachability) -> ()
+  @available(*, unavailable, renamed: "Connection")
+  public enum NetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: Shadhin_Robi.Reachability.NetworkStatus, b: Shadhin_Robi.Reachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Connection : Swift.CustomStringConvertible {
+    @available(*, deprecated, renamed: "unavailable")
+    case none
+    case unavailable, wifi, cellular
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: Shadhin_Robi.Reachability.Connection, b: Shadhin_Robi.Reachability.Connection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var whenReachable: Shadhin_Robi.Reachability.NetworkReachable?
+  public var whenUnreachable: Shadhin_Robi.Reachability.NetworkUnreachable?
+  @available(*, deprecated, renamed: "allowsCellularConnection")
+  final public let reachableOnWWAN: Swift.Bool
+  public var allowsCellularConnection: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  @available(*, deprecated, renamed: "connection.description")
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  @available(*, unavailable, renamed: "connection")
+  public var currentReachabilityStatus: Shadhin_Robi.Reachability.Connection {
+    get
+  }
+  public var connection: Shadhin_Robi.Reachability.Connection {
+    get
+  }
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
+  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  @objc deinit
+}
+extension Shadhin_Robi.Reachability {
+  public func startNotifier() throws
+  public func stopNotifier()
+  @available(*, deprecated, message: "Please use `connection != .none`")
+  public var isReachable: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .cellular`")
+  public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .wifi`")
+  public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class LBIndicator : UIKit.UIView, Shadhin_Robi.IndicatorProtocol {
+  @_Concurrency.MainActor(unsafe) open var isAnimating: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var radius: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) open var color: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) convenience public init(radius: CoreFoundation.CGFloat = 18.0, color: UIKit.UIColor = .gray)
+  @_Concurrency.MainActor(unsafe) open func startAnimating()
+  @_Concurrency.MainActor(unsafe) open func stopAnimating()
+  @_Concurrency.MainActor(unsafe) open func setupAnimation(in layer: QuartzCore.CALayer, size: CoreFoundation.CGSize)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public enum AudioPlayerBufferingStrategy : Swift.Int {
+  case defaultBuffering = 0
+  case playWhenPreferredBufferDurationFull = 1
+  case playWhenBufferNotEmpty = 2
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol ShadhinLogNotifier : ObjectiveC.NSObjectProtocol {
+  func tokenStatus(token isValid: Swift.Bool, error: Swift.String?)
+  func patchError(error: Swift.String)
+  func amarTuneError(error: Swift.String?)
+  func rcError(error: Swift.String?)
+  func shareContentWithRC(rc code: Swift.String)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func forceContentWrap(_ axes: Shadhin_Robi.QLAxis...)
+  @_Concurrency.MainActor(unsafe) public func forceContentWrap()
+  @_Concurrency.MainActor(unsafe) public var verticalHuggingPriority: Shadhin_Robi.QLPriority {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var horizontalHuggingPriority: Shadhin_Robi.QLPriority {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var contentHuggingPriority: Shadhin_Robi.QLPriorityPair {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var verticalCompressionResistancePriority: Shadhin_Robi.QLPriority {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var horizontalCompressionResistancePriority: Shadhin_Robi.QLPriority {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var contentCompressionResistancePriority: Shadhin_Robi.QLPriorityPair {
+    get
+    set
+  }
+}
+extension UIKit.UIView {
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func set(_ edge: Shadhin_Robi.QLAttribute, of value: CoreFoundation.CGFloat, relation: Shadhin_Robi.QLRelation = .equal, ratio: CoreFoundation.CGFloat = 1.0, priority: Shadhin_Robi.QLPriority = .required) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func set(_ edges: Shadhin_Robi.QLAttribute..., of value: CoreFoundation.CGFloat, relation: Shadhin_Robi.QLRelation = .equal, ratio: CoreFoundation.CGFloat = 1.0, priority: Shadhin_Robi.QLPriority = .required) -> Shadhin_Robi.QLMultipleConstraints
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func set(_ edges: [Shadhin_Robi.QLAttribute], to value: CoreFoundation.CGFloat, relation: Shadhin_Robi.QLRelation = .equal, ratio: CoreFoundation.CGFloat = 1.0, priority: Shadhin_Robi.QLPriority = .required) -> Shadhin_Robi.QLMultipleConstraints
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func layout(_ edge: Shadhin_Robi.QLAttribute? = nil, to otherEdge: Shadhin_Robi.QLAttribute, of view: Shadhin_Robi.QLView, relation: Shadhin_Robi.QLRelation = .equal, ratio: CoreFoundation.CGFloat = 1.0, offset: CoreFoundation.CGFloat = 0, priority: Shadhin_Robi.QLPriority = .required) -> UIKit.NSLayoutConstraint?
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func layout(_ edges: Shadhin_Robi.QLAttribute..., to view: Shadhin_Robi.QLView, relation: Shadhin_Robi.QLRelation = .equal, ratio: CoreFoundation.CGFloat = 1.0, offset: CoreFoundation.CGFloat = 0, priority: Shadhin_Robi.QLPriority = .required) -> Shadhin_Robi.QLMultipleConstraints
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func layoutToSuperview(_ edge: Shadhin_Robi.QLAttribute, relation: Shadhin_Robi.QLRelation = .equal, ratio: CoreFoundation.CGFloat = 1, offset: CoreFoundation.CGFloat = 0, priority: Shadhin_Robi.QLPriority = .required) -> UIKit.NSLayoutConstraint?
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func layoutToSuperview(_ edges: Shadhin_Robi.QLAttribute..., relation: Shadhin_Robi.QLRelation = .equal, ratio: CoreFoundation.CGFloat = 1, offset: CoreFoundation.CGFloat = 0, priority: Shadhin_Robi.QLPriority = .required) -> Shadhin_Robi.QLMultipleConstraints
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func layoutToSuperview(axis: Shadhin_Robi.QLAxis, offset: CoreFoundation.CGFloat = 0, priority: Shadhin_Robi.QLPriority = .required) -> Shadhin_Robi.QLAxisConstraints?
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func sizeToSuperview(withRatio ratio: CoreFoundation.CGFloat = 1, offset: CoreFoundation.CGFloat = 0, priority: Shadhin_Robi.QLPriority = .required) -> Shadhin_Robi.QLSizeConstraints?
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func centerInSuperview(offset: CoreFoundation.CGFloat = 0, priority: Shadhin_Robi.QLPriority = .required) -> Shadhin_Robi.QLCenterConstraints?
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func fillSuperview(withSizeRatio ratio: CoreFoundation.CGFloat = 1, offset: CoreFoundation.CGFloat = 0, priority: Shadhin_Robi.QLPriority = .required) -> Shadhin_Robi.QLFillConstraints?
+  @_Concurrency.MainActor(unsafe) public var isValidForQuickLayout: Swift.Bool {
+    get
+  }
+}
+extension Shadhin_Robi.EKAttributes {
+  public enum BackgroundStyle : Swift.Equatable {
+    public struct BlurStyle : Swift.Equatable {
+      public static var extra: Shadhin_Robi.EKAttributes.BackgroundStyle.BlurStyle {
+        get
+      }
+      public static var standard: Shadhin_Robi.EKAttributes.BackgroundStyle.BlurStyle {
+        get
+      }
+      @available(iOS 10.0, *)
+      public static var prominent: Shadhin_Robi.EKAttributes.BackgroundStyle.BlurStyle {
+        get
+      }
+      public static var dark: Shadhin_Robi.EKAttributes.BackgroundStyle.BlurStyle {
+        get
+      }
+      public init(style: UIKit.UIBlurEffect.Style)
+      public init(light: UIKit.UIBlurEffect.Style, dark: UIKit.UIBlurEffect.Style)
+      public func blurStyle(for traits: UIKit.UITraitCollection, mode: Shadhin_Robi.EKAttributes.DisplayMode) -> UIKit.UIBlurEffect.Style
+      public func blurEffect(for traits: UIKit.UITraitCollection, mode: Shadhin_Robi.EKAttributes.DisplayMode) -> UIKit.UIBlurEffect
+      public static func == (a: Shadhin_Robi.EKAttributes.BackgroundStyle.BlurStyle, b: Shadhin_Robi.EKAttributes.BackgroundStyle.BlurStyle) -> Swift.Bool
+    }
+    public struct Gradient {
+      public var colors: [Shadhin_Robi.EKColor]
+      public var startPoint: CoreFoundation.CGPoint
+      public var endPoint: CoreFoundation.CGPoint
+      public init(colors: [Shadhin_Robi.EKColor], startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint)
+    }
+    case visualEffect(style: Shadhin_Robi.EKAttributes.BackgroundStyle.BlurStyle)
+    case color(color: Shadhin_Robi.EKColor)
+    case gradient(gradient: Shadhin_Robi.EKAttributes.BackgroundStyle.Gradient)
+    case image(image: UIKit.UIImage)
+    case clear
+    public static func == (lhs: Shadhin_Robi.EKAttributes.BackgroundStyle, rhs: Shadhin_Robi.EKAttributes.BackgroundStyle) -> Swift.Bool
+  }
+}
+extension Shadhin_Robi.EKAttributes.StatusBar : Swift.Equatable {}
+extension Shadhin_Robi.EKAttributes.StatusBar : Swift.Hashable {}
+extension Shadhin_Robi.EKAttributes.PositionConstraints.Rotation.SupportedInterfaceOrientation : Swift.Equatable {}
+extension Shadhin_Robi.EKAttributes.PositionConstraints.Rotation.SupportedInterfaceOrientation : Swift.Hashable {}
+extension Shadhin_Robi.FeatureType : Swift.Equatable {}
+extension Shadhin_Robi.FeatureType : Swift.Hashable {}
+extension Shadhin_Robi.FeatureType : Swift.RawRepresentable {}
+extension Shadhin_Robi.EKAttributes.DisplayMode : Swift.Equatable {}
+extension Shadhin_Robi.EKAttributes.DisplayMode : Swift.Hashable {}
+extension Shadhin_Robi.FSPagerView.ScrollDirection : Swift.Equatable {}
+extension Shadhin_Robi.FSPagerView.ScrollDirection : Swift.Hashable {}
+extension Shadhin_Robi.FSPagerView.ScrollDirection : Swift.RawRepresentable {}
+@available(iOS 13.0, *)
+extension Shadhin_Robi.LoadingButton.ButtonStyle : Swift.Equatable {}
+@available(iOS 13.0, *)
+extension Shadhin_Robi.LoadingButton.ButtonStyle : Swift.Hashable {}
+extension Shadhin_Robi.DropDown.DismissMode : Swift.Equatable {}
+extension Shadhin_Robi.DropDown.DismissMode : Swift.Hashable {}
+extension Shadhin_Robi.DropDown.Direction : Swift.Equatable {}
+extension Shadhin_Robi.DropDown.Direction : Swift.Hashable {}
+extension Shadhin_Robi.EKAttributes.Animation.Translate.AnchorPosition : Swift.Hashable {}
+extension Shadhin_Robi.EKAttributes.NotificationHapticFeedback : Swift.Equatable {}
+extension Shadhin_Robi.EKAttributes.NotificationHapticFeedback : Swift.Hashable {}
+extension Shadhin_Robi.QLAxis : Swift.Equatable {}
+extension Shadhin_Robi.QLAxis : Swift.Hashable {}
+extension Shadhin_Robi.ToastPosition : Swift.Equatable {}
+extension Shadhin_Robi.ToastPosition : Swift.Hashable {}
+extension Shadhin_Robi.FSPagerViewTransformerType : Swift.Equatable {}
+extension Shadhin_Robi.FSPagerViewTransformerType : Swift.Hashable {}
+extension Shadhin_Robi.FSPagerViewTransformerType : Swift.RawRepresentable {}
+extension Shadhin_Robi.UIImageColorsQuality : Swift.Equatable {}
+extension Shadhin_Robi.UIImageColorsQuality : Swift.Hashable {}
+extension Shadhin_Robi.UIImageColorsQuality : Swift.RawRepresentable {}
+extension Shadhin_Robi.EKAlertMessage.ImagePosition : Swift.Equatable {}
+extension Shadhin_Robi.EKAlertMessage.ImagePosition : Swift.Hashable {}
+extension Shadhin_Robi.EKAttributes.Precedence.QueueingHeuristic : Swift.Equatable {}
+extension Shadhin_Robi.EKAttributes.Precedence.QueueingHeuristic : Swift.Hashable {}
+extension Shadhin_Robi.EKAttributes.Position : Swift.Equatable {}
+extension Shadhin_Robi.EKAttributes.Position : Swift.Hashable {}
+extension Shadhin_Robi.AudioQuality : Swift.Equatable {}
+extension Shadhin_Robi.AudioQuality : Swift.Hashable {}
+extension Shadhin_Robi.AudioQuality : Swift.RawRepresentable {}
+@available(*, unavailable, renamed: "Connection")
+extension Shadhin_Robi.Reachability.NetworkStatus : Swift.Equatable {}
+@available(*, unavailable, renamed: "Connection")
+extension Shadhin_Robi.Reachability.NetworkStatus : Swift.Hashable {}
+extension Shadhin_Robi.Reachability.Connection : Swift.Equatable {}
+extension Shadhin_Robi.Reachability.Connection : Swift.Hashable {}
+extension Shadhin_Robi.AudioPlayerBufferingStrategy : Swift.Equatable {}
+extension Shadhin_Robi.AudioPlayerBufferingStrategy : Swift.Hashable {}
+extension Shadhin_Robi.AudioPlayerBufferingStrategy : Swift.RawRepresentable {}

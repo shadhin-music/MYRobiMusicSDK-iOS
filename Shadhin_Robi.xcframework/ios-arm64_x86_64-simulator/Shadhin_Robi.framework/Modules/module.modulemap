@@ -1,0 +1,11 @@
+framework module Shadhin_Robi {
+  umbrella header "Shadhin_Robi.h"
+
+  export *
+  module * { export * }
+}
+
+module Shadhin_Robi.Swift {
+  header "Shadhin_Robi-Swift.h"
+  requires objc
+}
