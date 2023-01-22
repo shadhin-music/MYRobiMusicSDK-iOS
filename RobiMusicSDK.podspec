@@ -8,12 +8,12 @@
 
 Pod::Spec.new do |s|
     s.name              = 'RobiMusicSDK' # Name for your pod
-    s.version           = '0.0.1'
+    s.version           = '0.0.2'
     s.summary           = 'Sample Spec'
     s.homepage          = 'https://github.com/shadhin-music/MYRobiMusicSDK-iOS'
 
     s.author            = { 'MD Azizur Rahman' => 'azizur.gakk@gmail.com' }
-    s.license      = { :type => "MIT", :file => "LICENSE" }
+    s.license      = { :type => "MIT", :file => "LICENCE" }
 
     s.platform          = :ios
     # change the source location
