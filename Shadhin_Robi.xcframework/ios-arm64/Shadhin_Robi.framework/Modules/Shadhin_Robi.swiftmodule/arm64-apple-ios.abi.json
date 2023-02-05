@@ -6982,6 +6982,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Shadhin_Robi",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -9253,6 +9263,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Shadhin_Robi",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -9299,6 +9319,16 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Shadhin_Robi",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "Shadhin_Robi",
         "declAttributes": [
@@ -14016,6 +14046,16 @@
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Shadhin_Robi",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -23956,6 +23996,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Shadhin_Robi",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "AVFoundation",
         "printedName": "AVFoundation",
         "declKind": "Import",
@@ -33642,6 +33692,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Shadhin_Robi",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -34707,6 +34767,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Shadhin_Robi",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -34770,6 +34840,23 @@
         "kind": "Import",
         "name": "CoreData",
         "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "Shadhin_Robi"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Shadhin_Robi",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Photos",
+        "printedName": "Photos",
         "declKind": "Import",
         "moduleName": "Shadhin_Robi"
       },
@@ -35861,6 +35948,16 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Shadhin_Robi",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "Shadhin_Robi",
         "declAttributes": [
@@ -39082,6 +39179,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Shadhin_Robi",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -39508,6 +39615,16 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "Shadhin_Robi"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Shadhin_Robi",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -51203,6 +51320,16 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Shadhin_Robi",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "Shadhin_Robi",
         "declAttributes": [
@@ -82356,6 +82483,13 @@
       "value": "0b100"
     },
     {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/ProfileVC\/ProfileVM.swift",
+      "kind": "StringLiteral",
+      "offset": 259,
+      "length": 9,
+      "value": "\"Shadhin_Robi.ProfileVM\""
+    },
+    {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/SwiftEntrykit\/Model\/EntryAttributes\/EKAttributes+PositionConstraints.swift",
       "kind": "IntegerLiteral",
       "offset": 3355,
@@ -82708,7 +82842,7 @@
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/PodcastAudioVC\/PodcastAudioVM.swift",
       "kind": "StringLiteral",
-      "offset": 301,
+      "offset": 339,
       "length": 14,
       "value": "\"Shadhin_Robi.PodcastAudioVM\""
     },
@@ -83224,6 +83358,34 @@
       "value": "\"\""
     },
     {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Profile.swift",
+      "kind": "StringLiteral",
+      "offset": 204,
+      "length": 30,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Profile.swift",
+      "kind": "StringLiteral",
+      "offset": 216,
+      "length": 1,
+      "value": "\"\/User\/GetUserInfo\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Profile.swift",
+      "kind": "StringLiteral",
+      "offset": 285,
+      "length": 40,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Profile.swift",
+      "kind": "StringLiteral",
+      "offset": 297,
+      "length": 1,
+      "value": "\"\/User\/RobiUserProfileUpdate\""
+    },
+    {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/Kingfisher\/General\/KingfisherError.swift",
       "kind": "StringLiteral",
       "offset": 15521,
@@ -83257,6 +83419,363 @@
       "offset": 248,
       "length": 1,
       "value": "\"\/RBTPWA\/GETPWATOKEN\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 201,
+      "length": 42,
+      "value": "\"https:\/\/comments.shadhinmusic.com\/api\/v5\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 390,
+      "length": 92,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 410,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 429,
+      "length": 4,
+      "value": "\"PD\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 437,
+      "length": 18,
+      "value": "\"Comment\/CreateV2\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 457,
+      "length": 23,
+      "value": "\"VideoComment\/CreateV3\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 481,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 639,
+      "length": 88,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 659,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 678,
+      "length": 4,
+      "value": "\"PD\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 686,
+      "length": 16,
+      "value": "\"Reply\/CreateV3\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 704,
+      "length": 21,
+      "value": "\"VideoReply\/CreateV3\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 726,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 959,
+      "length": 131,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 979,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 997,
+      "length": 4,
+      "value": "\"PD\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1005,
+      "length": 20,
+      "value": "\"\/Comment\/GetListV2\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1028,
+      "length": 25,
+      "value": "\"\/VideoComment\/GetListV3\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1054,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1066,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1081,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1089,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1254,
+      "length": 102,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1274,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1293,
+      "length": 4,
+      "value": "\"PD\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1301,
+      "length": 15,
+      "value": "\"Reply\/GetList\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1319,
+      "length": 22,
+      "value": "\"VideoReply\/GetListV3\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1342,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1355,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1531,
+      "length": 121,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1551,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1569,
+      "length": 4,
+      "value": "\"PD\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1577,
+      "length": 25,
+      "value": "\"\/CommentFavorite\/Create\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1605,
+      "length": 32,
+      "value": "\"\/VideoCommentFavorite\/CreateV3\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1638,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1651,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1817,
+      "length": 112,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1837,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1855,
+      "length": 4,
+      "value": "\"PD\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1863,
+      "length": 21,
+      "value": "\"\/CommentLike\/Create\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1887,
+      "length": 28,
+      "value": "\"\/VideoCommentLike\/CreateV3\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1916,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 1928,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 2132,
+      "length": 127,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 2152,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 2171,
+      "length": 4,
+      "value": "\"PD\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 2179,
+      "length": 22,
+      "value": "\"ReplyFavorite\/Create\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 2204,
+      "length": 29,
+      "value": "\"VideoReplyFavorite\/CreateV3\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 2234,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 2247,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APICoreService+Comment.swift",
+      "kind": "StringLiteral",
+      "offset": 2258,
+      "length": 1,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/AlbumDetailsVC\/AlbumDetailsAdapter.swift",
@@ -84036,6 +84555,34 @@
       "value": "\"Shadhin_Robi.EKRatingMessageView\""
     },
     {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Common\/EmptyView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 268,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Common\/EmptyView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 457,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Common\/EmptyView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 572,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Common\/EmptyView.swift",
+      "kind": "StringLiteral",
+      "offset": 597,
+      "length": 15,
+      "value": "\"No Data Found\""
+    },
+    {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/LoadingButton\/LoadingButton.swift",
       "kind": "BooleanLiteral",
       "offset": 324,
@@ -84568,6 +85115,356 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 333,
+      "length": 8,
+      "value": "\"Status\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 365,
+      "length": 9,
+      "value": "\"Message\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 395,
+      "length": 6,
+      "value": "\"Data\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 427,
+      "length": 11,
+      "value": "\"TotalData\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 464,
+      "length": 11,
+      "value": "\"TotalPage\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 333,
+      "length": 8,
+      "value": "\"Status\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 365,
+      "length": 9,
+      "value": "\"Message\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 395,
+      "length": 6,
+      "value": "\"Data\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 427,
+      "length": 11,
+      "value": "\"TotalData\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 464,
+      "length": 11,
+      "value": "\"TotalPage\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1063,
+      "length": 11,
+      "value": "\"CommentId\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1100,
+      "length": 11,
+      "value": "\"ContentId\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1139,
+      "length": 13,
+      "value": "\"ContentType\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1181,
+      "length": 14,
+      "value": "\"ContentTitle\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1219,
+      "length": 9,
+      "value": "\"Message\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1255,
+      "length": 12,
+      "value": "\"CreateDate\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1292,
+      "length": 10,
+      "value": "\"UserName\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1326,
+      "length": 9,
+      "value": "\"UserPic\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1363,
+      "length": 13,
+      "value": "\"CommentLike\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1409,
+      "length": 18,
+      "value": "\"TotalCommentLike\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1459,
+      "length": 17,
+      "value": "\"CommentFavorite\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1513,
+      "length": 22,
+      "value": "\"TotalCommentFavorite\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1557,
+      "length": 7,
+      "value": "\"IsPin\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1586,
+      "length": 7,
+      "value": "\"Total\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1619,
+      "length": 11,
+      "value": "\"TotalPage\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1657,
+      "length": 12,
+      "value": "\"TotalReply\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1698,
+      "length": 14,
+      "value": "\"TotalComment\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1742,
+      "length": 15,
+      "value": "\"AdminUserType\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1785,
+      "length": 13,
+      "value": "\"CurrentPage\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1827,
+      "length": 14,
+      "value": "\"IsSubscriber\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1063,
+      "length": 11,
+      "value": "\"CommentId\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1100,
+      "length": 11,
+      "value": "\"ContentId\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1139,
+      "length": 13,
+      "value": "\"ContentType\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1181,
+      "length": 14,
+      "value": "\"ContentTitle\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1219,
+      "length": 9,
+      "value": "\"Message\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1255,
+      "length": 12,
+      "value": "\"CreateDate\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1292,
+      "length": 10,
+      "value": "\"UserName\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1326,
+      "length": 9,
+      "value": "\"UserPic\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1363,
+      "length": 13,
+      "value": "\"CommentLike\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1409,
+      "length": 18,
+      "value": "\"TotalCommentLike\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1459,
+      "length": 17,
+      "value": "\"CommentFavorite\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1513,
+      "length": 22,
+      "value": "\"TotalCommentFavorite\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1557,
+      "length": 7,
+      "value": "\"IsPin\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1586,
+      "length": 7,
+      "value": "\"Total\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1619,
+      "length": 11,
+      "value": "\"TotalPage\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1657,
+      "length": 12,
+      "value": "\"TotalReply\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1698,
+      "length": 14,
+      "value": "\"TotalComment\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1742,
+      "length": 15,
+      "value": "\"AdminUserType\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1785,
+      "length": 13,
+      "value": "\"CurrentPage\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/CommentResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 1827,
+      "length": 14,
+      "value": "\"IsSubscriber\""
+    },
+    {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/VGPlayer\/MediaCache\/VGPlayerResourceLoaderManager.swift",
       "kind": "StringLiteral",
       "offset": 505,
@@ -84578,62 +85475,62 @@
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+Music.swift",
       "kind": "StringLiteral",
       "offset": 417,
-      "length": 133,
+      "length": 128,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+Music.swift",
       "kind": "StringLiteral",
-      "offset": 449,
+      "offset": 444,
       "length": 1,
       "value": "\"\/robistreaming\/getpth?ptype=\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+Music.swift",
       "kind": "StringLiteral",
-      "offset": 491,
+      "offset": 486,
       "length": 1,
       "value": "\"&type=\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+Music.swift",
       "kind": "StringLiteral",
-      "offset": 515,
+      "offset": 510,
       "length": 1,
       "value": "\"&ttype=\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+Music.swift",
       "kind": "StringLiteral",
-      "offset": 534,
+      "offset": 529,
       "length": 1,
       "value": "\"&name=\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+Music.swift",
       "kind": "StringLiteral",
-      "offset": 549,
+      "offset": 544,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+Music.swift",
       "kind": "StringLiteral",
-      "offset": 644,
+      "offset": 639,
       "length": 3,
       "value": "\"S\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+Music.swift",
       "kind": "StringLiteral",
-      "offset": 675,
+      "offset": 670,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+Music.swift",
       "kind": "StringLiteral",
-      "offset": 699,
+      "offset": 694,
       "length": 2,
       "value": "\"\""
     },
@@ -85802,105 +86699,133 @@
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 378,
+      "offset": 295,
+      "length": 37,
+      "value": "\"https:\/\/api.shadhinmusic.com\/api\/v5\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
+      "kind": "StringLiteral",
+      "offset": 370,
+      "length": 38,
+      "value": "\"https:\/\/api.shadhinmusic.com\/userpic\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
+      "kind": "StringLiteral",
+      "offset": 438,
       "length": 3,
       "value": "\"4\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 441,
+      "offset": 501,
       "length": 8,
       "value": "\"Client\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 583,
+      "offset": 534,
+      "length": 12,
+      "value": "\"clienttype\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
+      "kind": "StringLiteral",
+      "offset": 680,
       "length": 44,
       "value": "\"Bearer \""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 623,
+      "offset": 720,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 626,
+      "offset": 723,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 664,
+      "offset": 761,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 738,
+      "offset": 835,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 761,
+      "offset": 858,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 1451,
+      "offset": 931,
+      "length": 5,
+      "value": "\"iOS\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
+      "kind": "StringLiteral",
+      "offset": 1615,
       "length": 72,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 1463,
+      "offset": 1627,
       "length": 1,
       "value": "\"\/HomeContent\/GetHomeContent?pageNumber=\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 1509,
+      "offset": 1673,
       "length": 1,
       "value": "\"&isPaid=false\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 1592,
+      "offset": 1756,
       "length": 34,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 1604,
+      "offset": 1768,
       "length": 1,
       "value": "\"\/track\/GetLatestTrack\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 1670,
+      "offset": 1834,
       "length": 34,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore.swift",
       "kind": "StringLiteral",
-      "offset": 1682,
+      "offset": 1846,
       "length": 1,
       "value": "\"\/video\/getlatestVideo\""
     },
@@ -86549,6 +87474,13 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/PodcastAudioVC\/Cell\/CommentSection.swift",
+      "kind": "IntegerLiteral",
+      "offset": 411,
+      "length": 2,
+      "value": "80"
+    },
+    {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/Kingfisher\/Cache\/MemoryStorage.swift",
       "kind": "IntegerLiteral",
       "offset": 8461,
@@ -86579,7 +87511,7 @@
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/LatestReleaseWatchLaterVC\/LatestReleaseWatchLaterVC.swift",
       "kind": "BooleanLiteral",
-      "offset": 642,
+      "offset": 687,
       "length": 5,
       "value": "false"
     },
@@ -87195,28 +88127,35 @@
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/PodcastAudioVC\/PodcastAudioAdapter.swift",
       "kind": "Array",
-      "offset": 501,
+      "offset": 658,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/PodcastAudioVC\/PodcastAudioAdapter.swift",
       "kind": "Array",
-      "offset": 590,
+      "offset": 747,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/PodcastAudioVC\/PodcastAudioAdapter.swift",
+      "kind": "Array",
+      "offset": 792,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/PodcastAudioVC\/PodcastAudioAdapter.swift",
       "kind": "BooleanLiteral",
-      "offset": 625,
+      "offset": 832,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/PodcastAudioVC\/PodcastAudioAdapter.swift",
       "kind": "StringLiteral",
-      "offset": 356,
+      "offset": 513,
       "length": 19,
       "value": "\"Shadhin_Robi.PodcastAudioAdapter\""
     },
@@ -87233,6 +88172,55 @@
       "offset": 631,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/JRTextFieldWithIcon.swift",
+      "kind": "IntegerLiteral",
+      "offset": 311,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/JRTextFieldWithIcon.swift",
+      "kind": "IntegerLiteral",
+      "offset": 359,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/JRTextFieldWithIcon.swift",
+      "kind": "IntegerLiteral",
+      "offset": 406,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/JRTextFieldWithIcon.swift",
+      "kind": "IntegerLiteral",
+      "offset": 460,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/JRTextFieldWithIcon.swift",
+      "kind": "IntegerLiteral",
+      "offset": 694,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/JRTextFieldWithIcon.swift",
+      "kind": "IntegerLiteral",
+      "offset": 809,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/JRTextFieldWithIcon.swift",
+      "kind": "IntegerLiteral",
+      "offset": 848,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Core\/BLWrapper.swift",
@@ -87289,6 +88277,13 @@
       "offset": 1100,
       "length": 26,
       "value": "\"persistentContainer Load\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/ProfileVC\/ProfileVC.swift",
+      "kind": "StringLiteral",
+      "offset": 927,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/ArtistDetailsVC\/Cell\/ArtistAlbumCell.swift",
@@ -87464,6 +88459,34 @@
       "offset": 173,
       "length": 12,
       "value": "\"Shadhin_Robi.GradientView\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/PodcastAudioVC\/Cell\/CommentCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 407,
+      "length": 2,
+      "value": "32"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/PodcastAudioVC\/Cell\/CommentCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 412,
+      "length": 2,
+      "value": "40"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/PodcastAudioVC\/Cell\/CommentCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 455,
+      "length": 2,
+      "value": "48"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/PodcastAudioVC\/Cell\/CommentCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 496,
+      "length": 2,
+      "value": "68"
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/LatestReleaseWatchLaterVC\/LatestReleaseWatchLaterAdapter.swift",
@@ -88476,7 +89499,7 @@
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Pattarn\/MainCoordinator.swift",
       "kind": "BooleanLiteral",
-      "offset": 15534,
+      "offset": 16103,
       "length": 4,
       "value": "true"
     },
@@ -88619,6 +89642,174 @@
       "offset": 338,
       "length": 24,
       "value": "\"Shadhin_Robi.MyPlaylistDetailsAdapter\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 286,
+      "length": 8,
+      "value": "\"Status\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 318,
+      "length": 9,
+      "value": "\"Message\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 348,
+      "length": 6,
+      "value": "\"Data\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 286,
+      "length": 8,
+      "value": "\"Status\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 318,
+      "length": 9,
+      "value": "\"Message\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 348,
+      "length": 6,
+      "value": "\"Data\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 676,
+      "length": 14,
+      "value": "\"UserFullName\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 718,
+      "length": 13,
+      "value": "\"PhoneNumber\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 757,
+      "length": 11,
+      "value": "\"BirthDate\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 791,
+      "length": 8,
+      "value": "\"Gender\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 823,
+      "length": 9,
+      "value": "\"Country\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 860,
+      "length": 13,
+      "value": "\"CountryCode\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 894,
+      "length": 6,
+      "value": "\"City\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 924,
+      "length": 9,
+      "value": "\"UserPic\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 962,
+      "length": 14,
+      "value": "\"RegisterWith\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 676,
+      "length": 14,
+      "value": "\"UserFullName\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 718,
+      "length": 13,
+      "value": "\"PhoneNumber\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 757,
+      "length": 11,
+      "value": "\"BirthDate\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 791,
+      "length": 8,
+      "value": "\"Gender\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 823,
+      "length": 9,
+      "value": "\"Country\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 860,
+      "length": 13,
+      "value": "\"CountryCode\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 894,
+      "length": 6,
+      "value": "\"City\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 924,
+      "length": 9,
+      "value": "\"UserPic\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/UserInfoResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 962,
+      "length": 14,
+      "value": "\"RegisterWith\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/AudioPlayer\/utils\/BackgroundHandler.swift",
@@ -89289,7 +90480,7 @@
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
       "kind": "StringLiteral",
       "offset": 207,
-      "length": 35,
+      "length": 39,
       "value": "\"\""
     },
     {
@@ -89297,82 +90488,82 @@
       "kind": "StringLiteral",
       "offset": 219,
       "length": 1,
-      "value": "\"\/streaming\/play\/status\""
+      "value": "\"\/RobiStreaming\/play\/status\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
       "kind": "StringLiteral",
-      "offset": 303,
-      "length": 40,
+      "offset": 307,
+      "length": 42,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
       "kind": "StringLiteral",
-      "offset": 315,
+      "offset": 319,
       "length": 1,
-      "value": "\"\/ClientActivity\/UserHistory\""
+      "value": "\"\/RobiUserActivity\/UserHistory\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
       "kind": "StringLiteral",
-      "offset": 404,
-      "length": 48,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
-      "kind": "StringLiteral",
-      "offset": 416,
-      "length": 1,
-      "value": "\"\/ClientPodcast\/PodcastUserHistoryV3\""
-    },
-    {
-      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
-      "kind": "StringLiteral",
-      "offset": 499,
-      "length": 40,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
-      "kind": "StringLiteral",
-      "offset": 511,
-      "length": 1,
-      "value": "\"\/ClientActivity\/UserSession\""
-    },
-    {
-      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
-      "kind": "StringLiteral",
-      "offset": 591,
-      "length": 47,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
-      "kind": "StringLiteral",
-      "offset": 603,
-      "length": 1,
-      "value": "\"\/ClientActivity\/Livepodcasthistory\""
-    },
-    {
-      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
-      "kind": "StringLiteral",
-      "offset": 680,
+      "offset": 410,
       "length": 46,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
       "kind": "StringLiteral",
-      "offset": 692,
+      "offset": 422,
       "length": 1,
-      "value": "\"\/ClientActivity\/PatchClickhistory\""
+      "value": "\"\/RobiPodcast\/PodcastUserHistoryV3\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
       "kind": "StringLiteral",
-      "offset": 5147,
+      "offset": 503,
+      "length": 42,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
+      "kind": "StringLiteral",
+      "offset": 515,
+      "length": 1,
+      "value": "\"\/RobiUserActivity\/UserSession\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
+      "kind": "StringLiteral",
+      "offset": 597,
+      "length": 49,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
+      "kind": "StringLiteral",
+      "offset": 609,
+      "length": 1,
+      "value": "\"\/RobiUserActivity\/Livepodcasthistory\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
+      "kind": "StringLiteral",
+      "offset": 688,
+      "length": 48,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
+      "kind": "StringLiteral",
+      "offset": 700,
+      "length": 1,
+      "value": "\"\/RobiUserActivity\/PatchClickhistory\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+TrackUser.swift",
+      "kind": "StringLiteral",
+      "offset": 5157,
       "length": 4,
       "value": "\"PD\""
     },
@@ -90148,8 +91339,15 @@
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/PodcastAudioVC\/PodcastAudioVC.swift",
+      "kind": "IntegerLiteral",
+      "offset": 542,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/PodcastAudioVC\/PodcastAudioVC.swift",
       "kind": "BooleanLiteral",
-      "offset": 567,
+      "offset": 600,
       "length": 5,
       "value": "false"
     },
@@ -90674,588 +91872,588 @@
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3064,
+      "offset": 3341,
       "length": 11,
       "value": "\"ContentID\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3147,
+      "offset": 3424,
       "length": 13,
       "value": "\"ContentType\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3188,
+      "offset": 3465,
       "length": 9,
       "value": "\"PlayUrl\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3226,
+      "offset": 3503,
       "length": 10,
       "value": "\"Duration\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3284,
+      "offset": 3561,
       "length": 8,
       "value": "\"Banner\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3322,
+      "offset": 3599,
       "length": 11,
       "value": "\"NewBanner\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3363,
+      "offset": 3640,
       "length": 11,
       "value": "\"PlayCount\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3399,
+      "offset": 3676,
       "length": 6,
       "value": "\"Type\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3432,
+      "offset": 3709,
       "length": 8,
       "value": "\"IsPaid\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3469,
+      "offset": 3746,
       "length": 10,
       "value": "\"Seekable\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3509,
+      "offset": 3786,
       "length": 11,
       "value": "\"TrackType\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3549,
+      "offset": 3826,
       "length": 10,
       "value": "\"ArtistId\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3586,
+      "offset": 3863,
       "length": 8,
       "value": "\"Artist\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3626,
+      "offset": 3903,
       "length": 13,
       "value": "\"ArtistImage\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3667,
+      "offset": 3944,
       "length": 9,
       "value": "\"AlbumId\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3706,
+      "offset": 3983,
       "length": 11,
       "value": "\"AlbumName\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3748,
+      "offset": 4025,
       "length": 12,
       "value": "\"AlbumImage\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3791,
+      "offset": 4068,
       "length": 12,
       "value": "\"PlayListId\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3836,
+      "offset": 4113,
       "length": 14,
       "value": "\"PlayListName\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3884,
+      "offset": 4161,
       "length": 15,
       "value": "\"PlayListImage\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3930,
+      "offset": 4207,
       "length": 12,
       "value": "\"CreateDate\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3969,
+      "offset": 4246,
       "length": 8,
       "value": "\"RootId\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 4006,
+      "offset": 4283,
       "length": 10,
       "value": "\"RootType\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 4046,
+      "offset": 4323,
       "length": 11,
       "value": "\"TeaserUrl\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 4086,
+      "offset": 4363,
       "length": 10,
       "value": "\"Follower\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 4128,
+      "offset": 4405,
       "length": 13,
       "value": "\"ClientValue\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3064,
+      "offset": 3341,
       "length": 11,
       "value": "\"ContentID\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3147,
+      "offset": 3424,
       "length": 13,
       "value": "\"ContentType\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3188,
+      "offset": 3465,
       "length": 9,
       "value": "\"PlayUrl\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3226,
+      "offset": 3503,
       "length": 10,
       "value": "\"Duration\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3284,
+      "offset": 3561,
       "length": 8,
       "value": "\"Banner\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3322,
+      "offset": 3599,
       "length": 11,
       "value": "\"NewBanner\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3363,
+      "offset": 3640,
       "length": 11,
       "value": "\"PlayCount\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3399,
+      "offset": 3676,
       "length": 6,
       "value": "\"Type\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3432,
+      "offset": 3709,
       "length": 8,
       "value": "\"IsPaid\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3469,
+      "offset": 3746,
       "length": 10,
       "value": "\"Seekable\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3509,
+      "offset": 3786,
       "length": 11,
       "value": "\"TrackType\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3549,
+      "offset": 3826,
       "length": 10,
       "value": "\"ArtistId\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3586,
+      "offset": 3863,
       "length": 8,
       "value": "\"Artist\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3626,
+      "offset": 3903,
       "length": 13,
       "value": "\"ArtistImage\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3667,
+      "offset": 3944,
       "length": 9,
       "value": "\"AlbumId\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3706,
+      "offset": 3983,
       "length": 11,
       "value": "\"AlbumName\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3748,
+      "offset": 4025,
       "length": 12,
       "value": "\"AlbumImage\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3791,
+      "offset": 4068,
       "length": 12,
       "value": "\"PlayListId\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3836,
+      "offset": 4113,
       "length": 14,
       "value": "\"PlayListName\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3884,
+      "offset": 4161,
       "length": 15,
       "value": "\"PlayListImage\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3930,
+      "offset": 4207,
       "length": 12,
       "value": "\"CreateDate\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3969,
+      "offset": 4246,
       "length": 8,
       "value": "\"RootId\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 4006,
+      "offset": 4283,
       "length": 10,
       "value": "\"RootType\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 4046,
+      "offset": 4323,
       "length": 11,
       "value": "\"TeaserUrl\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 4086,
+      "offset": 4363,
       "length": 10,
       "value": "\"Follower\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 4128,
+      "offset": 4405,
       "length": 13,
       "value": "\"ClientValue\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5462,
+      "offset": 5739,
       "length": 8,
       "value": "\"Artist\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5491,
+      "offset": 5768,
       "length": 10,
       "value": "\"Playlist\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5521,
+      "offset": 5798,
       "length": 9,
       "value": "\"Release\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5548,
+      "offset": 5825,
       "length": 7,
       "value": "\"Track\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5578,
+      "offset": 5855,
       "length": 17,
       "value": "\"NewReleaseAudio\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5615,
+      "offset": 5892,
       "length": 9,
       "value": "\"Podcast\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5642,
+      "offset": 5919,
       "length": 12,
       "value": "\"SmallVideo\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5677,
+      "offset": 5954,
       "length": 12,
       "value": "\"LargeVideo\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5710,
+      "offset": 5987,
       "length": 10,
       "value": "\"amarTune\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5741,
+      "offset": 6018,
       "length": 10,
       "value": "\"download\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5775,
+      "offset": 6052,
       "length": 13,
       "value": "\"PodcastLive\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5812,
+      "offset": 6089,
       "length": 6,
       "value": "\"Show\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5843,
+      "offset": 6120,
       "length": 14,
       "value": "\"PodcastVideo\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5874,
+      "offset": 6151,
       "length": 6,
       "value": "\"PDPS\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5901,
+      "offset": 6178,
       "length": 10,
       "value": "\"Discover\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5929,
+      "offset": 6206,
       "length": 7,
       "value": "\"Radio\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5462,
+      "offset": 5739,
       "length": 8,
       "value": "\"Artist\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5491,
+      "offset": 5768,
       "length": 10,
       "value": "\"Playlist\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5521,
+      "offset": 5798,
       "length": 9,
       "value": "\"Release\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5548,
+      "offset": 5825,
       "length": 7,
       "value": "\"Track\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5578,
+      "offset": 5855,
       "length": 17,
       "value": "\"NewReleaseAudio\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5615,
+      "offset": 5892,
       "length": 9,
       "value": "\"Podcast\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5642,
+      "offset": 5919,
       "length": 12,
       "value": "\"SmallVideo\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5677,
+      "offset": 5954,
       "length": 12,
       "value": "\"LargeVideo\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5710,
+      "offset": 5987,
       "length": 10,
       "value": "\"amarTune\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5741,
+      "offset": 6018,
       "length": 10,
       "value": "\"download\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5775,
+      "offset": 6052,
       "length": 13,
       "value": "\"PodcastLive\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5812,
+      "offset": 6089,
       "length": 6,
       "value": "\"Show\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5843,
+      "offset": 6120,
       "length": 14,
       "value": "\"PodcastVideo\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5874,
+      "offset": 6151,
       "length": 6,
       "value": "\"PDPS\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5901,
+      "offset": 6178,
       "length": 10,
       "value": "\"Discover\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Model\/HomeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 5929,
+      "offset": 6206,
       "length": 7,
       "value": "\"Radio\""
     },
@@ -92641,14 +93839,14 @@
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/HomeVC\/HomeAdapter.swift",
       "kind": "Array",
-      "offset": 1485,
+      "offset": 1486,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/ViewController\/HomeVC\/HomeAdapter.swift",
       "kind": "StringLiteral",
-      "offset": 1296,
+      "offset": 1297,
       "length": 11,
       "value": "\"Shadhin_Robi.HomeAdapter\""
     },
@@ -93391,20 +94589,6 @@
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+Login.swift",
       "kind": "StringLiteral",
       "offset": 620,
-      "length": 1,
-      "value": "\"\/mybl\/Login\""
-    },
-    {
-      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+Login.swift",
-      "kind": "StringLiteral",
-      "offset": 673,
-      "length": 29,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/APIService\/APIServiceCore+Login.swift",
-      "kind": "StringLiteral",
-      "offset": 690,
       "length": 1,
       "value": "\"\/ROBI\/Login\""
     },
@@ -96099,6 +97283,90 @@
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
       "kind": "StringLiteral",
+      "offset": 1970,
+      "length": 15,
+      "value": "\"default_album\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2004,
+      "length": 16,
+      "value": "\"default_artist\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2041,
+      "length": 18,
+      "value": "\"default_playlist\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2077,
+      "length": 15,
+      "value": "\"default_radio\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2109,
+      "length": 14,
+      "value": "\"default_song\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2141,
+      "length": 15,
+      "value": "\"default_video\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2201,
+      "length": 15,
+      "value": "\"profileAvater\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2235,
+      "length": 8,
+      "value": "\"camera\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2263,
+      "length": 7,
+      "value": "\"photo\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2312,
+      "length": 11,
+      "value": "\"love.fill\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2348,
+      "length": 6,
+      "value": "\"love\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2378,
+      "length": 14,
+      "value": "\"user_premium\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
       "offset": 243,
       "length": 6,
       "value": "\"more\""
@@ -96375,6 +97643,90 @@
       "offset": 1889,
       "length": 13,
       "value": "\"pause_radio\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 1970,
+      "length": 15,
+      "value": "\"default_album\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2004,
+      "length": 16,
+      "value": "\"default_artist\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2041,
+      "length": 18,
+      "value": "\"default_playlist\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2077,
+      "length": 15,
+      "value": "\"default_radio\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2109,
+      "length": 14,
+      "value": "\"default_song\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2141,
+      "length": 15,
+      "value": "\"default_video\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2201,
+      "length": 15,
+      "value": "\"profileAvater\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2235,
+      "length": 8,
+      "value": "\"camera\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2263,
+      "length": 7,
+      "value": "\"photo\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2312,
+      "length": 11,
+      "value": "\"love.fill\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2348,
+      "length": 6,
+      "value": "\"love\""
+    },
+    {
+      "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Utility\/AppImage.swift",
+      "kind": "StringLiteral",
+      "offset": 2378,
+      "length": 14,
+      "value": "\"user_premium\""
     },
     {
       "filePath": "\/Users\/admin\/Desktop\/Project\/Shadhin_Robi\/Shadhin_Robi\/Library\/Kingfisher\/Image\/ImageDrawing.swift",

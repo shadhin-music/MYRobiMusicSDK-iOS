@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8457293B297D4C4A00A645EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457293A297D4C4A00A645EB /* AppDelegate.swift */; };
-		8457293D297D4C4A00A645EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457293C297D4C4A00A645EB /* SceneDelegate.swift */; };
 		8457293F297D4C4A00A645EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457293E297D4C4A00A645EB /* ViewController.swift */; };
 		84572942297D4C4A00A645EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84572940297D4C4A00A645EB /* Main.storyboard */; };
 		84572944297D4C4D00A645EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84572943297D4C4D00A645EB /* Assets.xcassets */; };
@@ -23,13 +22,27 @@
 		8457295F297D4C6300A645EB /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84572956297D4C6300A645EB /* A.swift */; };
 		84572960297D4C6300A645EB /* TabBarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84572957297D4C6300A645EB /* TabBarVC.xib */; };
 		84572962297D4C7100A645EB /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84572961297D4C7000A645EB /* SignInVC.swift */; };
-		84572964297D4EED00A645EB /* Shadhin_Robi.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84572963297D4EED00A645EB /* Shadhin_Robi.xcframework */; };
+		84E7BE94298F99A300BA314F /* Shadhin_Robi.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E7BE92298F934000BA314F /* Shadhin_Robi.xcframework */; };
+		84E7BE95298F99A300BA314F /* Shadhin_Robi.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84E7BE92298F934000BA314F /* Shadhin_Robi.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84E7BE96298F99A300BA314F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84E7BE95298F99A300BA314F /* Shadhin_Robi.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		84572937297D4C4A00A645EB /* ShadhinRobiSDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShadhinRobiSDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8457293A297D4C4A00A645EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8457293C297D4C4A00A645EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8457293E297D4C4A00A645EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84572941297D4C4A00A645EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84572943297D4C4D00A645EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,7 +58,7 @@
 		84572956297D4C6300A645EB /* A.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
 		84572957297D4C6300A645EB /* TabBarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarVC.xib; sourceTree = "<group>"; };
 		84572961297D4C7000A645EB /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
-		84572963297D4EED00A645EB /* Shadhin_Robi.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Shadhin_Robi.xcframework; sourceTree = "<group>"; };
+		84E7BE92298F934000BA314F /* Shadhin_Robi.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Shadhin_Robi.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84572964297D4EED00A645EB /* Shadhin_Robi.xcframework in Frameworks */,
+				84E7BE94298F99A300BA314F /* Shadhin_Robi.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +76,7 @@
 		8457292E297D4C4A00A645EB = {
 			isa = PBXGroup;
 			children = (
-				84572963297D4EED00A645EB /* Shadhin_Robi.xcframework */,
+				84E7BE92298F934000BA314F /* Shadhin_Robi.xcframework */,
 				84572939297D4C4A00A645EB /* ShadhinRobiSDKExample */,
 				84572938297D4C4A00A645EB /* Products */,
 			);
@@ -83,7 +96,6 @@
 				84572961297D4C7000A645EB /* SignInVC.swift */,
 				8457294E297D4C6300A645EB /* TabVC */,
 				8457293A297D4C4A00A645EB /* AppDelegate.swift */,
-				8457293C297D4C4A00A645EB /* SceneDelegate.swift */,
 				8457293E297D4C4A00A645EB /* ViewController.swift */,
 				84572940297D4C4A00A645EB /* Main.storyboard */,
 				84572943297D4C4D00A645EB /* Assets.xcassets */,
@@ -119,6 +131,7 @@
 				84572933297D4C4A00A645EB /* Sources */,
 				84572934297D4C4A00A645EB /* Frameworks */,
 				84572935297D4C4A00A645EB /* Resources */,
+				84E7BE96298F99A300BA314F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,7 +205,6 @@
 				8457295C297D4C6300A645EB /* HomeVC.swift in Sources */,
 				84572958297D4C6300A645EB /* TabBarVC.swift in Sources */,
 				8457295E297D4C6300A645EB /* C.swift in Sources */,
-				8457293D297D4C4A00A645EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +359,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,6 +388,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
